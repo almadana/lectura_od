@@ -1,0 +1,80 @@
+:root {
+  --light-green: #d7fdec;
+  --dark-green: #c9e8da;
+  --light-red: #f9c2c2;
+  --dark-red: #dba4a4;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.stimuli_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stimuli_word {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.stimuli_word.inactive {
+  visibility: hidden;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.option {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 1px solid black;
+  width: 17rem;
+}
+
+.option.left {
+  background: var(--light-green);
+}
+
+.option.left:hover,
+.option.left.active
+{
+  background: var(--dark-green);
+}
+
+.option.right {
+  background: var(--light-red);
+}
+
+.option.right:hover,
+.option.right.active
+  {
+  background: var(--dark-red);
+}
+
+.instructions {
+  font-size: 1.5rem;
+  max-width: 30rem;
+}
+
+.instructions em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.instructions.next_task_wrapper {
+  margin: 3rem;
+}
+
+.instructions a.next_task {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid black;
+  text-decoration: none;
+}

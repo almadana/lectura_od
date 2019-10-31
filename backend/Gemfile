@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+
+gem "unicorn"
+#gem "pg"
+gem "sequel"
+gem "rack"
