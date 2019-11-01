@@ -8,6 +8,9 @@ DB.create_table :words do
   Integer  :rt
   Integer  :time_elapsed
   Integer  :trial_index
+  Integer  :trial_count
+  String   :trial_type
+  Integer  :word_id
   String   :target
   String   :correct_response
   String   :key_press

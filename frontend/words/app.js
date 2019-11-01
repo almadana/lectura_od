@@ -4,6 +4,8 @@ var key_no = '78';
 
 var key_code_to_label = {'83': 's', '78': 'n'};
 
+var trial_count = 0;
+
 const query = new URLSearchParams(window.location.search);
 const subject_id = query.get('subject_id')||0;
 
@@ -50,11 +52,14 @@ for (word of words_training) {
         </div>
       </div>
     `,
-    data: {subject_id: subject_id, correct_response: word[2], target: word[1]},
+    data: {subject_id: subject_id, correct_response: word[2], target: word[1], word_id: word[0]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];
+      datalog['trial_count'] = trial_count;
+      trial_count++;
       datalog['key_label'] = key_code_to_label[datalog['key_press']];
+      datalog['trial_type'] = "practice";
       var score;
       if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
         score = 1
@@ -130,8 +135,8 @@ var after_training_blank = {
 
 timeline.push(after_training_blank);
 
-//for (word of shuffle(words)) {
-for (word of shuffle(words_training)) {
+//for (word of shuffle(words_training)) {
+for (word of shuffle(words)) {
   var stimulus = {
     type: 'html-keyboard-response',
     stimulus: `
@@ -143,11 +148,14 @@ for (word of shuffle(words_training)) {
         </div>
       </div>
     `,
-    data: {subject_id: subject_id, correct_response: word[2], target: word[1]},
+    data: {subject_id: subject_id, correct_response: word[2], target: word[1], word_id: word[0]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];
+      datalog['trial_count'] = trial_count;
+      trial_count++;
       datalog['key_label'] = key_code_to_label[datalog['key_press']];
+      datalog['trial_type'] = "task";
       var score;
       if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
         score = 1

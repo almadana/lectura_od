@@ -24,7 +24,6 @@ CORS = {'Access-Control-Allow-Origin': '*'}
 
 run Proc.new { |env|
   request = Rack::Request.new env
-#  query = JSON.parse(request.params['q'])
   payload = env['rack.input'].read
   path = env['PATH_INFO']
 
@@ -52,13 +51,12 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      word = json_payload.slice('subject_id', 'rt', 'time_elapsed', 'trial_index', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      word = json_payload.slice('subject_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
       word['created_at'] = Time.now
       DB.transaction do
           words.insert(word)
       end
       msg = "ok"
-#      headers = {'Location' => 'http://digital.psico.edu.uy/raven', 'Access-Control-Allow-Origin': '*'}
       ['200', headers, [msg]]
     elsif env['REQUEST_METHOD']=="GET"
       msg = "thanks"
