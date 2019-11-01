@@ -2,8 +2,10 @@ var timeline = [];
 var key_yes = '83';
 var key_no = '78';
 
+var key_code_to_label = {'83': 's', '78': 'n'};
+
 const query = new URLSearchParams(window.location.search);
-const params = query.get('sid');
+const subject_id = query.get('subject_id')||0;
 
 function simulate_key(target, key) {
   console.log(target);
@@ -43,13 +45,25 @@ for (word of words_training) {
       <div class='stimuli_wrapper'>
         <div class='stimuli_word'>${word[1]}</div>
         <div class='options'>
-           <button class='option left' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
+          <button class='option left' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
           <button class='option right' type='button' onclick='simulate_key(this, "n");'>No es palabra</button>
         </div>
       </div>
     `,
-    data: {correct_response: word[2], string: word[1]},
+    data: {subject_id: subject_id, correct_response: word[2], target: word[1]},
     choices: ['s', 'n'],
+    on_finish: function() {
+      var datalog = jsPsych.data.get().last(1).values()[0];
+      datalog['key_label'] = key_code_to_label[datalog['key_press']];
+      var score;
+      if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
+        score = 1
+      } else {
+        score = 0
+      }
+      datalog['score'] = score
+      log_data(datalog);
+    }
   }
 
   timeline.push(stimulus);
@@ -60,7 +74,7 @@ for (word of words_training) {
       var last_trial = jsPsych.data.get().last(1).values();
       return `
       <div class='stimuli_wrapper'>
-        <div class='stimuli_word'>${last_trial[0].string}</div>
+        <div class='stimuli_word'>${last_trial[0].target}</div>
         <div class='options'>
           <button class='option left ${last_trial[0].key_press==key_yes ? 'active' : ''}' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
           <button class='option right ${last_trial[0].key_press==key_no ? 'active' : ''}' type='button' onclick='simulate_key(this, "n");'>No es palabra</button>
@@ -80,7 +94,7 @@ for (word of words_training) {
       var last_trial = jsPsych.data.get().last(2).values();
       return `
       <div class='stimuli_wrapper'>
-        <div class='stimuli_word inactive'>${last_trial[0].string}</div>
+        <div class='stimuli_word inactive'>${last_trial[0].target}</div>
         <div class='options'>
           <button class='option left ${last_trial[0].key_press==key_yes ? 'active' : ''}' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
           <button class='option right ${last_trial[0].key_press==key_no ? 'active' : ''}' type='button' onclick='simulate_key(this, "n");'>No es palabra</button>
@@ -116,7 +130,8 @@ var after_training_blank = {
 
 timeline.push(after_training_blank);
 
-for (word of shuffle(words)) {
+//for (word of shuffle(words)) {
+for (word of shuffle(words_training)) {
   var stimulus = {
     type: 'html-keyboard-response',
     stimulus: `
@@ -128,10 +143,19 @@ for (word of shuffle(words)) {
         </div>
       </div>
     `,
-    data: {correct_response: word[2], string: word[1]},
+    data: {subject_id: subject_id, correct_response: word[2], target: word[1]},
     choices: ['s', 'n'],
     on_finish: function() {
-      log_data(jsPsych.data.get().last(1).values()[0]);
+      var datalog = jsPsych.data.get().last(1).values()[0];
+      datalog['key_label'] = key_code_to_label[datalog['key_press']];
+      var score;
+      if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
+        score = 1
+      } else {
+        score = 0
+      }
+      datalog['score'] = score
+      log_data(datalog);
     }
   }
 
@@ -143,7 +167,7 @@ for (word of shuffle(words)) {
       var last_trial = jsPsych.data.get().last(1).values();
       return `
       <div class='stimuli_wrapper'>
-        <div class='stimuli_word'>${last_trial[0].string}</div>
+        <div class='stimuli_word'>${last_trial[0].target}</div>
         <div class='options'>
           <button class='option left ${last_trial[0].key_press==key_yes ? 'active' : ''}' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
           <button class='option right ${last_trial[0].key_press==key_no ? 'active' : ''}' type='button' onclick='simulate_key(this, "n");'>No es palabra</button>
@@ -163,7 +187,7 @@ for (word of shuffle(words)) {
       var last_trial = jsPsych.data.get().last(2).values();
       return `
       <div class='stimuli_wrapper'>
-        <div class='stimuli_word inactive'>${last_trial[0].string}</div>
+        <div class='stimuli_word inactive'>${last_trial[0].target}</div>
         <div class='options'>
           <button class='option left ${last_trial[0].key_press==key_yes ? 'active' : ''}' type='button' onclick='simulate_key(this, "s");'>Es palabra</button>
           <button class='option right ${last_trial[0].key_press==key_no ? 'active' : ''}' type='button' onclick='simulate_key(this, "n");'>No es palabra</button>
@@ -185,10 +209,10 @@ var goodbye = {
   Espera instrucciones del investigador antes de continuar.
   </p>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='http://digital.psico.edu.uy/'>Continuar</raven>
+  <a class='next_task' href='http://digital.psico.edu.uy/raven?subject_id=${subject_id}'>Continuar</raven>
   </p>
   `,
-  choices: ['space'],
+  choices: jsPsych.NO_KEYS
 }
 
 timeline.push(goodbye);

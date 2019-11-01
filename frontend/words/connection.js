@@ -1,6 +1,6 @@
 function log_data(data) {
   var http = new XMLHttpRequest();
-  var url = 'http://192.168.122.144:3000';
+  var url = 'http://192.168.122.144:3000/words';
   http.open('POST', url, true);
 
   //Send the proper header information along with the request
@@ -8,7 +8,6 @@ function log_data(data) {
 
   http.onreadystatechange = function() {
     if(http.readyState == 4 && http.status == 200) {
-      console.log("response", http.responseText);
     }
   }
 
