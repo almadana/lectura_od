@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="screen.css" rel="stylesheet" type="text/css"></link>
+    <title>Hola!</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <h1>
+            Hola!
+          </h1>
+        </div>
+        <form action="http://192.168.122.144:3000/forms/start" method="post" accept-charset="utf-8">
+          <input type="hidden" value="" id="subject_id" name="subject_id" />
+          <input class="btn btn-primary" type="submit" value="Comenzar" />
+        </form>
+      </div>
+    </main>
+    <script charset="utf-8" src="start.js"></script>
+  </body>
+</html>

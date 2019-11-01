@@ -9,21 +9,42 @@ participants = DB[:participants]
 Backend  = "http://192.168.122.144:3000"
 Frontend = "http://192.168.122.144"
 
+FormsDesign = {"0" => {"0" => ["wrong_code"]},
+                "A" => 
+                {"1" => ["trampa", "normas", "democracia", "celulares"],
+                 "2" => ["democracia", "celulares", "trampa", "normas"]
+                },
+               "B" =>
+                {"1" => ["democracia", "celulares", "trampa", "normas"],
+                 "2" => ["trampa", "normas", "democracia", "celulares"]
+                }
+              }
+
 CORS = {'Access-Control-Allow-Origin': '*'}
 
 run Proc.new { |env|
-  puts "connected"
   request = Rack::Request.new env
 #  query = JSON.parse(request.params['q'])
   payload = env['rack.input'].read
-  path = env['PATH_INFO'].split('/')
-  #path starts with "/", so path[0]==""
-  #so we use path[1] for the first item in the path
-  target = path[1]
+  path = env['PATH_INFO']
 
   headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
+  subject_id = payload['subject_id'] || request.params['subject_id']
 
-  if target=="words"
+  if subject_id
+    reg = /([0-9]+)([AB])([12])/
+    match = reg.match(subject_id)
+    if match
+      group = match[2]
+      order = match[3]
+      forms = FormsDesign[group][order]
+    else
+      group = "0"
+      order = "0"
+    end
+  end
+
+  if path=="/words"
     if env['REQUEST_METHOD']=="POST"
       if payload.length>0
         json_payload = JSON.parse payload
@@ -43,15 +64,88 @@ run Proc.new { |env|
       msg = "thanks"
       ['200', headers, [msg]]
     end
-  elsif target=="participant"
+  elsif path=="/participant"
     if env['REQUEST_METHOD']=="POST"
-      participant = request.params.slice('subject_id')
-      participant['created_at'] = Time.now
+      participant = {'subject_id': subject_id, 'created_at': Time.now}
       DB.transaction do
         participants.insert(participant)
       end
       msg = "ok"
-      location = "#{Frontend}/words?subject_id=#{participant['subject_id']}"
+      location = "#{Frontend}/words?subject_id=#{subject_id}"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/start"
+    if env['REQUEST_METHOD']=="POST"
+      msg = "ok"
+      location = "#{Frontend}/forms/#{forms[0]}.html?subject_id=#{subject_id}"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/next"
+    if env['REQUEST_METHOD']=="POST"
+      current_form = request.params.delete('current_form')
+      index = forms.find_index(current_form)
+      next_form = forms[index+1]
+      puts [current_form, index, next_form]
+
+      data = request.params
+      data['created_at'] = Time.now
+      DB[current_form.to_sym].insert data
+
+      if next_form
+        location = "#{Frontend}/forms/#{next_form}.html?subject_id=#{subject_id}"
+      else
+        location = "#{Frontend}/forms/thanks.html?subject_id=#{subject_id}"
+      end
+
+      msg = "ok"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/1"
+    if env['REQUEST_METHOD']=="POST"
+      msg = "ok"
+      location = "#{Frontend}/forms/#{forms[1]}.html?subject_id=#{subject_id}"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/2"
+    if env['REQUEST_METHOD']=="POST"
+      msg = "ok"
+      location = "#{Frontend}/forms/#{forms[2]}.html?subject_id=#{subject_id}"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/3"
+    if env['REQUEST_METHOD']=="POST"
+      msg = "ok"
+      location = "#{Frontend}/forms/#{forms[3]}.html?subject_id=#{subject_id}"
+      headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
+      ['302', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "get ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/forms/4"
+    if env['REQUEST_METHOD']=="POST"
+      msg = "ok"
+      location = "#{Frontend}/forms/thanks.html?subject_id=#{subject_id}"
       headers = {'Content-Type' => 'text/html','Location' => location, 'Access-Control-Allow-Origin' => '*'}
       ['302', headers, [msg]]
     elsif env['REQUEST_METHOD']=="GET"

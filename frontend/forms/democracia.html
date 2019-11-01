@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="screen.css" rel="stylesheet" type="text/css"></link>
+    <title>Hola!</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <h1>
+            La democracia en Atenas
+          </h1>
+        </div>
+        <form action="http://192.168.122.144:3000/forms/next" method="post" accept-charset="utf-8">
+          <input type="hidden" value="" id="subject_id" name="subject_id" />
+          <input type="hidden" value="democracia"  name="current_form" />
+
+          <div class="question">
+            <div class="form-group">
+              <p>
+                <label for="objetivos_discurso">Pregunta 1: Uno de los objetivos del discurso de la parte B era honrar a los soldados caídos en el primer año de la guerra del Peloponeso. ¿Cuál era OTRO de los objetivos de este discurso? </label>
+              </p>
+              <input type="text" class="form-control" id="objetivos_discurso" name="objetivos_discurso" placeholder="Tu respuesta" required>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 2: ¿Qué condenó a Tucídides al exilio? *
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="exilio_tucilides_a" name="exilio_tucilides" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="exilio_tucilides_a" value="a">
+                a. Que no pudiese lograr la victoria de los atenienses en Anfípolis.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="exilio_tucilides_b" name="exilio_tucilides" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="exilio_tucilides_b">
+                b. Que tomase el mando de una flota en Anfípolis.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="exilio_tucilides_c" name="exilio_tucilides" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="exilio_tucilides_c">
+                c. Que recogiese información de los dos bandos en conflicto.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="exilio_tucilides_d" name="exilio_tucilides" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="exilio_tucilides_d">
+                d. Que desertase de los atenienses para luchar con los espartanos.
+              </label>
+            </div>
+          </div>
+          <div class="question">
+            <div class="form-group">
+              <p>
+                <label for="discurso_b">
+                  Pregunta 3: ¿Quién escribió el discurso de la Parte B? Remítete al texto para justificar tu respuesta. 
+                </label>
+              </p>
+              <input type="text" class="form-control" id="discurso_b" name="discurso_b" placeholder="Tu respuesta" required>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 4: Según el texto, ¿qué diferenciaba a Tucídides de los demás historiadores de su época? <Paste>
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="diferencia_tucilides_a" name="diferencia_tucilides" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="diferencia_tucilides_a">
+                a. Escribía sobre personas corrientes, no sobre héroes.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="diferencia_tucilides_b" name="diferencia_tucilides" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="diferencia_tucilides_b">
+                b. Utilizaba anécdotas, más que meros hechos.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="diferencia_tucilides_c" name="diferencia_tucilides" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="diferencia_tucilides_c">
+                c. Explicaba sucesos históricos haciendo referencia a sus causas sobrenaturales.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="diferencia_tucilides_d" name="diferencia_tucilides" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="diferencia_tucilides_d">
+                d. Se centraba en lo que llevaba a las personas a actuar del modo en que lo hacían.
+              </label>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 5: Fíjate en este fragmento del texto, que se encuentra casi al final de la Parte B: «Además, nos hemos procurado muchos placeres para el espíritu. Los juegos y sacrificios que celebramos durante todo el año y la elegancia de nuestras casas particulares constituyen una fuente diaria de placer que nos hace olvidar cualquier preocupación.» ¿Cuál de las siguientes frases resume mejor esta parte del texto?
+
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="mejor_resumen_a" name="mejor_resumen" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="mejor_resumen_a">
+                a. El sistema de gobierno de Atenas permite a cualquier persona elaborar leyes.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="mejor_resumen_b" name="mejor_resumen" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="mejor_resumen_b">
+                b. La diversión y la belleza son parte de la buena vida que se puede tener en Atenas.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="mejor_resumen_c" name="mejor_resumen" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="mejor_resumen_c">
+                c. Los atenienses viven rodeados de un lujo excesivo y no pueden tomarse la vida en serio.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="mejor_resumen_d" name="mejor_resumen" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="mejor_resumen_d">
+                d. La vida pública y privada son consideradas como una misma cosa.
+              </label>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Siguiente" />
+        </form>
+      </div>
+    </main>
+    <script charset="utf-8" src="start.js"></script>
+  </body>
+</html>

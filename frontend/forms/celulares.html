@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="screen.css" rel="stylesheet" type="text/css"></link>
+    <title>La seguridad de los teléfonos celulares</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <h1>
+            La seguridad de los teléfonos celulares
+          </h1>
+          <p>Este texto procede de un sitio web. Utilízalo para responder a las siguientes preguntas.</p>
+        </div>
+        <form action="http://192.168.122.144:3000/forms/next" method="post" accept-charset="utf-8">
+          <input type="hidden" value="" id="subject_id" name="subject_id" />
+          <input type="hidden" value="celulares"  name="current_form" />
+
+          <div class="question">
+            <p>
+            Pregunta 1: ¿Cuál es la finalidad de los puntos clave?
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="puntos_clave_a" name="puntos_clave" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="puntos_clave_a">
+                a. Describir el peligro que entraña el uso de los teléfonos celulares.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="puntos_clave_b" name="puntos_clave" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="puntos_clave_b">
+                b. Dar a entender que hay un debate abierto sobre la seguridad de los teléfonos celulares.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="puntos_clave_c" name="puntos_clave" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="puntos_clave_c">
+                c. Describir las precauciones que deben tomar quienes utilizan los teléfonos celulares.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="puntos_clave_d" name="puntos_clave" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="puntos_clave_d">
+                d. Dar a entender que no hay ningún problema de salud causado por los teléfonos celulares.
+              </label>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 2: "Es difícil demostrar que una cosa ha sido, definitivamente, la causa de otra."¿Qué relación tiene esta información con las afirmaciones del Punto 4 que aparecen en las columnas Sí y No de la tabla "¿Son peligrosos los teléfonos celulares?"?
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="peligrosidad_a" name="peligrosidad" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="peligrosidad_a">
+                a. Respalda el argumento de SÍ, pero no lo demuestra.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="peligrosidad_b" name="peligrosidad" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="peligrosidad_b">
+                b. Demuestra el argumento del SÍ.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="peligrosidad_c" name="peligrosidad" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="peligrosidad_c">
+                c. Respalda el argumento de NO, pero no lo demuestra.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="peligrosidad_d" name="peligrosidad" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="peligrosidad_d">
+                d. Muestra que el argumento del NO es falso.
+              </label>
+            </div>
+          </div>
+          <div class="question">
+            <div class="form-group">
+              <p>
+              <label for="otros_factores">
+                Pregunta 3: Fíjate en el Punto 3 de la columna No de la tabla. En ese contexto ¿cuál podría ser uno de esos “otros factores”? Justifica tu respuesta.
+              </label>
+              </p>
+              <input type="text" class="form-control" id="otros_factores" name="otros_factores" placeholder="Tu respuesta" required>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 4: Fíjate en la tabla titulada "Si usas teléfono móvil…" ¿En cuál de estas ideas se basa la tabla?
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="idea_base_a" name="idea_base" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="idea_base_a">
+                a. No hay peligro en el uso de los teléfonos celulares.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="idea_base_b" name="idea_base" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="idea_base_b">
+                b. Hay un riesgo probado en el uso de los teléfonos celulares.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="idea_base_c" name="idea_base" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="idea_base_c">
+                c. Puede o no puede haber peligro en el uso de los teléfonos celulares, pero vale la pena tomar precauciones.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="idea_base_d" name="idea_base" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="idea_base_d">
+                d. Las instrucciones de la columna Haz están dirigidas a quienes se toman la amenaza en serio; y las de la columna No hagas, a todos los demás.
+              </label>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Siguiente" />
+        </form>
+      </div>
+    </main>
+    <script charset="utf-8" src="start.js"></script>
+  </body>
+</html>

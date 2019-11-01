@@ -209,7 +209,7 @@ var goodbye = {
   Espera instrucciones del investigador antes de continuar.
   </p>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='http://digital.psico.edu.uy/raven?subject_id=${subject_id}'>Continuar</raven>
+  <a class='next_task' href='http://digital.psico.edu.uy/raven?subject_id=${subject_id}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS

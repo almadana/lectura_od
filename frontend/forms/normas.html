@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="screen.css" rel="stylesheet" type="text/css"></link>
+    <title>Nuevas normas</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="column">
+          <h1>
+            Nuevas normas
+          </h1>
+          <p>Utiliza el editorial «La tecnología crea la necesidad de nuevas normas» para contestar a las siguientes preguntas:</p>
+        </div>
+        <div class="column">
+          <form action="http://192.168.122.144:3000/forms/next" method="post" accept-charset="utf-8">
+            <input type="hidden" value="" id="subject_id" name="subject_id" />
+            <input type="hidden" value="normas"  name="current_form" />
+
+            <div class="question">
+              <div class="form-group">
+                <p>
+                <label for="decision_australianos">
+                  Pregunta 1: Escribe la frase del texto que explica lo que hicieron los australianos para decidir cómo tratar a los embriones congelados pertenecientes a una pareja fallecida en un accidente de avión. 
+                </label>
+                </p>
+                <input type="text" class="form-control" id="decision_australianos" name="decision_australianos" placeholder="Tu respuesta" required>
+              </div>
+            </div>
+            <div class="question">
+              <div class="form-group">
+                <p>
+                <label for="ejemplos_nuevas_normas">
+                  Pregunta 2: Enumera dos ejemplos del editorial que justifiquen cómo la tecnología moderna, como la empleada para implantar embriones congelados, crea la necesidad de nuevas normas. 
+                </label>
+                </p>
+                <input type="text" class="form-control" id="ejemplos_nuevas_normas" name="ejemplos_nuevas_normas" placeholder="Tu respuesta" required>
+              </div>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Siguiente" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <script charset="utf-8" src="start.js"></script>
+  </body>
+</html>

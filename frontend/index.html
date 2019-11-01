@@ -20,11 +20,14 @@
         </div>
         <div class="row">
           <form action="http://192.168.122.144:3000/participant" method="post" accept-charset="utf-8">
-            <input type="text" value="" name="subject_id" />
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="" value="" name="subject_id" id="subject_id" />
+            </div>
             <input class="btn btn-primary" type="submit" value="Ingresar" />
           </form>
         </div>
       </div>
     </main>
+    <script charset="utf-8" src="validate.js"></script>
   </body>
 </html>

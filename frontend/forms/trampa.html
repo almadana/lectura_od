@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"></link>
+    <link href="screen.css" rel="stylesheet" type="text/css"></link>
+    <title>La representación será la trampa</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <h1>
+            La representación será la trampa
+          </h1>
+          <p>Este texto procede de un sitio web. Utilízalo para responder a las siguientes preguntas.</p>
+        </div>
+        <form action="http://192.168.122.144:3000/forms/next" method="post" accept-charset="utf-8">
+          <input type="hidden" value="" id="subject_id" name="subject_id" />
+          <input type="hidden" value="trampa"  name="current_form" />
+
+          <div class="question">
+            <div class="form-group">
+              <p>
+              <label for="antes_telon">
+                Pregunta 1: ¿Qué estaban haciendo los personajes de la obra de teatro que se comenta en el texto justo antes de que se levantase el telón?
+              </label>
+              </p>
+              <input type="text" class="form-control" id="antes_telon" name="antes_telon" placeholder="Tu respuesta" required>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 2: “Es una eternidad; a veces pasa hasta un cuarto de hora (…)”. Según Turai, ¿por qué un cuarto de hora es “una eternidad”? 
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="cuarto_hora_a" name="cuarto_hora" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="cuarto_hora_a">
+                a. Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="cuarto_hora_b" name="cuarto_hora" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="cuarto_hora_b">
+                b. Parece que se tarda un siglo en aclarar la situación al comienzo de una obra de teatro.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="cuarto_hora_c" name="cuarto_hora" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="cuarto_hora_c">
+                c. Siempre parece que a un dramaturgo le lleva mucho tiempo escribir el comienzo de una obra de teatro.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="cuarto_hora_d" name="cuarto_hora" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="cuarto_hora_d">
+                d. Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro.
+              </label>
+            </div>
+          </div>
+          <div class="question">
+            <p>
+            Pregunta 3: En general, ¿qué está haciendo el dramaturgo Molnár en este fragmento?
+            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="hace_molnar_a" name="hace_molnar" class="custom-control-input" value="a" required>
+              <label class="custom-control-label" for="hace_molnar_a">
+                a. Está mostrando el modo en que cada personaje va a resolver sus propios problemas.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="hace_molnar_b" name="hace_molnar" class="custom-control-input" value="b">
+              <label class="custom-control-label" for="hace_molnar_b">
+                b. Está haciendo que sus personajes demuestren cómo es una eternidad en una obra de teatro.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="hace_molnar_c" name="hace_molnar" class="custom-control-input" value="c">
+              <label class="custom-control-label" for="hace_molnar_c">
+                c. Está dando un ejemplo de una típica y tradicional escena inicial de una obra de teatro.
+              </label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="hace_molnar_d" name="hace_molnar" class="custom-control-input" value="d">
+              <label class="custom-control-label" for="hace_molnar_d">
+                d. Está utilizando a los personajes para representar uno de sus propios problemas de creación.
+              </label>
+            </div>
+          </div>
+
+          <input class="btn btn-primary" type="submit" value="Siguiente" />
+        </form>
+      </div>
+    </main>
+    <script charset="utf-8" src="start.js"></script>
+  </body>
+</html>
