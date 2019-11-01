@@ -2,6 +2,13 @@ require 'time'
 require 'json'
 require 'sequel'
 
+#This monkey-patch is needed for Ruby before 2.5
+class Hash
+  def slice(*keys)
+    return self.select{|key, value| keys.include?(key) }
+  end
+end
+
 DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 words = DB[:words]
 participants = DB[:participants]
@@ -28,7 +35,7 @@ run Proc.new { |env|
   path = env['PATH_INFO']
 
   headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
-  subject_id = payload['subject_id'] || request.params['subject_id']
+  subject_id = request.params['subject_id'] || payload['subject_id']
 
   if subject_id
     reg = /([0-9]+)([AB])([12])/
