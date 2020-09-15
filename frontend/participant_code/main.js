@@ -1,5 +1,9 @@
 window.addEventListener('DOMContentLoaded', function(evt) {
   var _form = document.querySelector("form");
+  const action_path = "participant";
+  const action = config[environment].backend + "/" + "participant";
+  _form.action = action;
+
   const _subject_id = document.getElementById('subject_id');
 
   _subject_id.addEventListener('input', function(event) {

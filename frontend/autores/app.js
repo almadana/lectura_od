@@ -19,7 +19,7 @@ var welcome = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Hola</h1>
   <p class='instructions'>
-  A continuación te aparecerá una lista de secuencias de letras, y tendrás que decidir si corresponden a palabras del español o no. Para responder que si, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
+  A continuación te aparecerá una lista nombres, y tendrás que decidir si corresponden a autores o no. Para responder que si, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
   </p>
   <p class='instructions'>
   Para comenzar con una prueba presiona la tecla <em>espacio</em>
@@ -40,7 +40,7 @@ var welcome_blank = {
 
 timeline.push(welcome_blank);
 
-for (word of shuffle(autores)) {
+for (word of shuffle(autores[environment])) {
   var stimulus = {
     type: 'html-keyboard-response',
     stimulus: `
@@ -118,10 +118,9 @@ var goodbye = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Gracias!</h1>
   <p class='instructions'>
-  Espera instrucciones del investigador antes de continuar.
   </p>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='http://digital.psico.edu.uy/raven?subject_id=${subject_id}'>Continuar</a>
+  <a class='next_task' href='${config[environment].frontend}/comprension_lectora/index.html?subject_id=${subject_id}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS

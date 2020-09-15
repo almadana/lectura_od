@@ -39,8 +39,7 @@ var welcome_blank = {
 }
 
 timeline.push(welcome_blank);
-
-for (word of words_training) {
+for (word of words_training[environment]) {
   var stimulus = {
     type: 'html-keyboard-response',
     stimulus: `
@@ -136,7 +135,7 @@ var after_training_blank = {
 timeline.push(after_training_blank);
 
 //for (word of shuffle(words_training)) {
-for (word of shuffle(words)) {
+for (word of shuffle(words[environment])) {
   var stimulus = {
     type: 'html-keyboard-response',
     stimulus: `
@@ -213,11 +212,8 @@ for (word of shuffle(words)) {
 var goodbye = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Gracias!</h1>
-  <p class='instructions'>
-  Espera instrucciones del investigador antes de continuar.
-  </p>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='http://digital.psico.edu.uy/raven?subject_id=${subject_id}'>Continuar</a>
+  <a class='next_task' href='${config[environment].frontend}/autores/index.html?subject_id=${subject_id}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS
