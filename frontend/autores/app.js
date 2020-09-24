@@ -17,9 +17,9 @@ function simulate_key(target, key) {
 
 var welcome = {
   type: 'html-keyboard-response',
-  stimulus: `<h1>Hola</h1>
+  stimulus: `<h1>Prueba de reconocimiento de autores</h1>
   <p class='instructions'>
-  A continuación te aparecerá una lista nombres, y tendrás que decidir si corresponden a autores o no. Para responder que si, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
+  A continuación te aparecerá una lista de nombres, y tendrás que decidir si corresponden a autores o no. Para responder que sí, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
   </p>
   <p class='instructions'>
   Para comenzar con una prueba presiona la tecla <em>espacio</em>
@@ -116,7 +116,7 @@ for (word of shuffle(autores[environment])) {
 
 var goodbye = {
   type: 'html-keyboard-response',
-  stimulus: `<h1>Gracias!</h1>
+  stimulus: `<h1>¡Gracias!</h1>
   <p class='instructions'>
   </p>
   <p class='instructions next_task_wrapper'>
