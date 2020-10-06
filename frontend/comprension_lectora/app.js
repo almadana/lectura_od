@@ -39,17 +39,35 @@ function next_question() {
   let question_id = _excercise.dataset.question_id;
 
   const trial = conditions[environment][excercise_id];
-  const question = trial.questions[question_id]
+  //  const question = trial.questions[question_id]
 
-  const _question = document.querySelector(".excercise .question");
   if (question_id) {
     var next_question_id = parseInt(question_id) + 1;
   } else {
     var next_question_id = 0;
   }
 
+  const _question = document.querySelector(".excercise .question");
+  const _question_body = document.querySelector(".excercise .question .body");
+  const _answer = document.querySelector(".excercise .answer");
+
   if (trial.questions[next_question_id]) {
-    _question.innerHTML = trial.questions[next_question_id];
+    const question = trial.questions[next_question_id];
+    _answer.name = question.name;
+    _answer.innerHTML = '';
+    _question_body.innerHTML = question.text;
+
+    let _option = document.createElement("option");
+    _option.value = "";
+    _option.textContent = "";
+    _answer.appendChild(_option);
+
+    for (let option of question.options) {
+      let _option = document.createElement("option");
+      _option.value = option.value;
+      _option.textContent = option.text;
+      _answer.appendChild(_option);
+    }
     _excercise.dataset.question_id = next_question_id;
   } else {
     next_excercise()
@@ -63,7 +81,7 @@ function welcome() {
   _start_task.addEventListener('click', evt=> {
     _welcome.classList.add("hidden");
     _excercise.classList.remove("hidden");
-    next_question();
+    next_excercise();
   });
 }
 
@@ -71,7 +89,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const _next_question = document.querySelector("#next_question");
   _next_question.addEventListener('click', next_question);
 
-  next_excercise();
+//  const _prev_question = document.querySelector("#prev_question");
+//  _prev_question.addEventListener('click', prev_question);
 
   welcome();
 });

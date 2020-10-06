@@ -121,6 +121,7 @@ form table tbody td {
 }
 
 .excercise .question_wrap {
+  display: flex;
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -129,4 +130,13 @@ form table tbody td {
   border-top: 1px solid black;
   width: 100%;
   text-align: center;
+  justify-content: center;
+}
+
+.excercise .question_wrap .next {
+  margin-left: 1rem;
+}
+
+.excercise .question_wrap .prev {
+  margin-right: 1rem;
 }

@@ -7,7 +7,7 @@ var key_code_to_label = {'83': 's', '78': 'n'};
 var trial_count = 0;
 
 const query = new URLSearchParams(window.location.search);
-const subject_id = query.get('subject_id')||0;
+const uid = query.get('uid')||0;
 
 function simulate_key(target, key) {
   console.log(target);
@@ -51,7 +51,7 @@ for (word of words_training[environment]) {
         </div>
       </div>
     `,
-    data: {subject_id: subject_id, correct_response: word[2], target: word[1], word_id: word[0]},
+    data: {uid: uid, correct_response: word[2], target: word[1], word_id: word[0]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];
@@ -147,7 +147,7 @@ for (word of shuffle(words[environment])) {
         </div>
       </div>
     `,
-    data: {subject_id: subject_id, correct_response: word[2], target: word[1], word_id: word[0]},
+    data: {uid: uid, correct_response: word[2], target: word[1], word_id: word[0]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];
@@ -213,7 +213,7 @@ var goodbye = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Gracias!</h1>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='${config[environment].frontend}/autores/index.html?subject_id=${subject_id}'>Continuar</a>
+  <a class='next_task' href='${config[environment].frontend}/autores/index.html?uid=${uid}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS

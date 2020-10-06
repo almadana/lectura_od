@@ -23,14 +23,26 @@ const conditions = {
   
       Repellendus ipsa eos pariatur. Rerum ducimus rem reiciendis totam porro. Eum quia beatae omnis illo earum voluptates qui minima. Reprehenderit numquam similique qui qui. Aspernatur quia omnis voluptatem dolore laudantium et.`,
       questions: [
-        "a1) ---",
-        "a2) ***",
-        "a3) ...",
+        {text: "a1) ---",
+          name: "a1",
+          options: [
+            {value: "a uno", text: "a Uno..."},
+            {value: "a dos", text: "a dos..."},
+          ],
+        },
+        {text: "a2) ---",
+          name: "a2",
+          options: [
+            {value: "a tres", text: "a tres..."},
+            {value: "a cuatro", text: "a cuatro..."},
+          ],
+        },
       ]
     },
   
     {title: 'La democracia en Atenas',
       text: `   
+      <h2>hola</h2>
   ***PARTE A 
 
   Tucídides fue un historiador y militar que vivió en el siglo V a. C, durante la época de la Grecia clásica. Nació en Atenas. Durante la guerra del Peloponeso (del 431 a. C. al 404 a. C.), entre Atenas y Esparta, estuvo al mando de una flota cuya misión era proteger la ciudad de Anfípolis, en Tracia. No consiguió llegar a la ciudad a tiempo. Ésta cayó en manos del general espartano, Brásidas, lo que condenó a Tucídides a veinte años de exilio. Esta circunstancia le dio la oportunidad de recoger información bastante completa de los dos bandos en conflicto y la posibilidad de investigar para su obra Historia de la guerra del Peloponeso. 
@@ -47,9 +59,20 @@ const conditions = {
 
     Tucídides, Historia de la guerra del Peloponeso (adaptación) `,
       questions: [
-        "b1) ---",
-        "b2) ***",
-        "b3) ...",
+        {text: "b1) ---",
+          name: "b1",
+          options: [
+            {value: "b uno", text: "b Uno..."},
+            {value: "b dos", text: "b dos..."},
+          ],
+        },
+        {text: "b2) ---",
+          name: "b2",
+          options: [
+            {value: "b tres", text: "b tres..."},
+            {value: "b cuatro", text: "b cuatro..."},
+          ],
+        },
       ]
     }
   ],
