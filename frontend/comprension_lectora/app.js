@@ -56,9 +56,22 @@ function next_question() {
   }
 }
 
+function welcome() {
+  const _welcome = document.querySelector(".welcome");
+  const _excercise = document.querySelector(".excercise");
+  const _start_task = document.querySelector(".welcome .start_task");
+  _start_task.addEventListener('click', evt=> {
+    _welcome.classList.add("hidden");
+    _excercise.classList.remove("hidden");
+    next_question();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const _next_question = document.querySelector("#next_question");
   _next_question.addEventListener('click', next_question);
 
   next_excercise();
+
+  welcome();
 });
