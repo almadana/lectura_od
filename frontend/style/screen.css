@@ -117,7 +117,8 @@ form table tbody td {
 }
 
 .excercise .text {
-  white-space: pre-wrap;
+//  white-space: pre-wrap;
+    font-family: "serif";
 }
 
 .excercise .question_wrap {
@@ -125,12 +126,13 @@ form table tbody td {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background: white;
+  background: #dddddd;
   padding: 1rem;
   border-top: 1px solid black;
   width: 100%;
   text-align: center;
   justify-content: center;
+  font-family: "serif";
 }
 
 .excercise .question_wrap .next {
