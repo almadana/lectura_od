@@ -135,7 +135,7 @@ Todos se sientan. </dd>
     "Nuestro sistema de gobierno no copia las leyes de los estados vecinos; nosotros somos más un ejemplo para otros que imitadores de los demás. Nuestro sistema se denomina democracia, ya que el gobierno no depende de unos pocos, sino de una mayoría. Nuestras leyes garantizan iguales derechos para todos en las cuestiones privadas, mientras que el prestigio en la vida pública depende más de los méritos que de la clase social. 
     Tampoco la clase social impide a nadie llegar a ejercer cualquier cargo público (...). Y, al tiempo que no interferimos en las cuestiones privadas, respetamos la ley en los asuntos públicos. Obedecemos a quienes ponemos a desempeñar cargos públicos y obedecemos las leyes, en especial las dirigidas a la protección de los oprimidos y las leyes no escritas que supone una verdadera vergüenza infringir. 
     Además, nos hemos procurado muchos placeres para el espíritu. Los juegos y sacrificios que celebramos durante todo el año y la elegancia de nuestras casas particulares constituyen una fuente diaria de placer que nos ayuda a olvidar cualquier preocupación; mientras que los numerosos habitantes de la ciudad atraen a Atenas productos de todo el mundo, de modo que a los atenienses los frutos de otros pueblos les son tan familiares como los suyos propios. "
-
+    <br>
     Tucídides, Historia de la guerra del Peloponeso (adaptación) `,
       questions: [
         {text: "<b>Pregunta 1/7</b><br>  Uno de los objetivos del discurso de la parte B era honrar a los soldados caídos en el primer año de la guerra del Peloponeso. <br>¿Cuál era OTRO de los objetivos de este discurso?",
