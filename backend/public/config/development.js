@@ -5,7 +5,7 @@
   const frontend_base = script_dir + "../"
 
   config.development = {
-    backend: "http:/192.168.122.144:3000",
+    backend: "http:/192.168.122.144",
     frontend: frontend_base,
   }
 }());

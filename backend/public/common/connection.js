@@ -1,6 +1,6 @@
-function log_data(data) {
+function log_data(endpoint, data) {
   var http = new XMLHttpRequest();
-  var url = config[environment].backend;
+  var url = `${config[environment].backend}/${endpoint}`;
   http.open('POST', url, true);
 
   //Send the proper header information along with the request

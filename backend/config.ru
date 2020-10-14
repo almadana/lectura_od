@@ -11,31 +11,34 @@ end
 
 DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 words = DB[:words]
+autores = DB[:autores]
 participants = DB[:participants]
 
-Backend  = "http://192.168.122.144:3000"
-Frontend = "http://192.168.122.144"
-
-FormsDesign = {"0" => {"0" => ["wrong_code"]},
-                "A" => 
-                {"1" => ["trampa", "normas", "democracia", "celulares"],
-                 "2" => ["democracia", "celulares", "trampa", "normas"]
-                },
-               "B" =>
-                {"1" => ["democracia", "celulares", "trampa", "normas"],
-                 "2" => ["trampa", "normas", "democracia", "celulares"]
-                }
-              }
+#Backend  = "http://192.168.122.144:3000"
+#Frontend = "http://192.168.122.144"
+#
+#FormsDesign = {"0" => {"0" => ["wrong_code"]},
+#                "A" => 
+#                {"1" => ["trampa", "normas", "democracia", "celulares"],
+#                 "2" => ["democracia", "celulares", "trampa", "normas"]
+#                },
+#               "B" =>
+#                {"1" => ["democracia", "celulares", "trampa", "normas"],
+#                 "2" => ["trampa", "normas", "democracia", "celulares"]
+#                }
+#              }
 
 #CORS = {'Access-Control-Allow-Origin': '*'}
+headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
 
 run Proc.new { |env|
   request = Rack::Request.new env
   payload = env['rack.input'].read
-  path = env['PATH_INFO']
+  server_name = env['SERVER_NAME']
+  path_info = env['PATH_INFO']
+  path = path_info.gsub("/#{server_name}","")
 
-  headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
-  subject_id = request.params['subject_id'] || payload['subject_id']
+  sid = request.params['sid'] || payload['sid']
   group_id   = request.params['group_id'] || payload['group_id']
 
 #  if subject_id
@@ -59,10 +62,29 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      word = json_payload.slice('subject_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
-      word['created_at'] = Time.now
+      row = json_payload.slice('sid', 'group_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      row['created_at'] = Time.now
       DB.transaction do
-          words.insert(word)
+          words.insert(row)
+      end
+      msg = "ok"
+      ['200', headers, [msg]]
+    elsif env['REQUEST_METHOD']=="GET"
+      msg = "thanks"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/autores"
+    if env['REQUEST_METHOD']=="POST"
+      if payload.length>0
+        json_payload = JSON.parse payload
+      else
+        json_payload = {}
+      end
+
+      row = json_payload.slice('sid', 'group_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      row['created_at'] = Time.now
+      DB.transaction do
+        autores.insert(row)
       end
       msg = "ok"
       ['200', headers, [msg]]
@@ -160,7 +182,6 @@ run Proc.new { |env|
 #    end
   else
     msg = "thanks"
-    headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
     ['200', headers, [msg]]
   end
 }
