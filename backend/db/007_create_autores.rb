@@ -3,12 +3,12 @@ require 'sequel'
 DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 
 begin
-  DB.drop_table :words
+  DB.drop_table :autores
 rescue
   puts "table didn't exist"
 end
 
-DB.create_table :words do
+DB.create_table :autores do
   primary_key :id
   String   :sid, null: false
   String   :gid, default: ""
