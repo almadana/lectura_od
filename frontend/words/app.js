@@ -8,7 +8,7 @@ var trial_count = 0;
 
 const query = new URLSearchParams(window.location.search);
 const sid = query.get('sid')||0;
-const gid = query.get('sid');
+const gid = query.get('gid');
 
 function simulate_key(target, key) {
   console.log(target);
