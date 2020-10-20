@@ -4,9 +4,9 @@
       text: `
 <p style="font-style:italic">La acción se desarrolla en un castillo junto a una playa en Italia. </p>
 <h4>Acto primero </h4>
-
+<em>
 Lujoso salón de invitados de un hermoso castillo al lado de la playa. Puertas a derecha e izquierda. Mobiliario de salón en medio del escenario: un sofá, una mesa y dos sillones. Grandes ventanas al fondo. Noche estrellada. El escenario está a oscuras. Cuando se levanta el telón, se oye a unos hombres que conversan en voz alta tras la puerta de la izquierda. La puerta se abre y entran tres caballeros de esmoquin. Uno de ellos enciende la luz inmediatamente. Se dirigen hacia el centro en silencio y se sitúan alrededor de la mesa. Se sientan a la vez, Gál en el sillón de la izquierda, Turai en el de la derecha y Ádám en el sofá del medio. Silencio muy largo, casi violento. Se estiran cómodamente. Silencio. Después: 
-
+</em>
 <dl>
 <dt>GÁL</dt>
 <dd>¿Por qué estás tan pensativo? </dd>
@@ -27,7 +27,7 @@ Lujoso salón de invitados de un hermoso castillo al lado de la playa. Puertas 
 <dt>GÁL</dt>
 <dd>No debes ser esclavo de tu profesión. </dd>
 <dt>TURAI</dt>
-<dd>Si no la dominas, eres su esclavo. No hay término medio. Créeme, no es fácil empezar bien una obra de teatro. Es uno de los problemas más arduos de la puesta en escena. Presentar a los personajes rápidamente. Fijémonos en esta escena de aquí, con nosotros tres. Tres caballeros de esmoquin. Supongamos que no suben al salón de este castillo señorial, sino a un escenario, justo cuando comienza la obra de teatro. Tendrían que hablar sobre toda una serie de temas sin interés hasta que pudiera saberse quiénes somos. ¿No sería mucho más fácil comenzar todo esto poniéndonos de pie y presentándonos a nosotros mismos? Se levanta. Buenas noches. Los tres estamos invitados en este castillo. Acabamos de llegar del comedor, donde hemos tomado una cena excelente y hemos bebido dos botellas de champán. <br>
+<dd>Si no la dominas, eres su esclavo. No hay término medio. Créeme, no es fácil empezar bien una obra de teatro. Es uno de los problemas más arduos de la puesta en escena. Presentar a los personajes rápidamente. Fijémonos en esta escena de aquí, con nosotros tres. Tres caballeros de esmoquin. Supongamos que no suben al salón de este castillo señorial, sino a un escenario, justo cuando comienza la obra de teatro. Tendrían que hablar sobre toda una serie de temas sin interés hasta que pudiera saberse quiénes somos. ¿No sería mucho más fácil comenzar todo esto poniéndonos de pie y presentándonos a nosotros mismos? <em>Se levanta.</em> Buenas noches. Los tres estamos invitados en este castillo. Acabamos de llegar del comedor, donde hemos tomado una cena excelente y hemos bebido dos botellas de champán. <br>
 Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatro desde hace treinta años, ésa es mi profesión. Punto y final. Tu turno. 
 <dt>GÁL</dt> 
 <dd><i>Se levanta.</i> Mi nombre es Gál, también soy autor teatral. También escribo obras de teatro en colaboración con este caballero aquí presente. Somos una pareja famosa de autores teatrales. En todos los carteles de las buenas comedias y operetas se lee: escrita por Gál y Turai. Naturalmente, ésta es también mi profesión. </dd>
@@ -43,7 +43,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
 <dd>Y estoy enamorado de la solista. </dd>
 <dt>TURAI</dt>
 <dd>No debiste añadir eso. Los espectadores lo habrían averiguado de todas formas. 
-Todos se sientan. </dd>
+<em>Todos se sientan.</em> </dd>
 <dt>TURAI</dt>
 <dd>Y bien, ¿no sería ésta la manera más sencilla de empezar una obra de teatro? </dd>
 <dt>GÁL</dt>
@@ -52,7 +52,7 @@ Todos se sientan. </dd>
 <dd>Créeme, no es tan complicado. Piensa en todo ello como en... </dd>
 <dt>GÁL</dt>
 <dd>De acuerdo, de acuerdo, de acuerdo, no empieces a hablar de teatro otra vez. Estoy harto de ello. Ya hablaremos mañana, si quieres. </dd>
-<p style="font-style:italic">“La representación será la trampa” es el comienzo de una obra de teatro del dramaturgo húngaro Ferenc Molnár.</p>`,
+<p>“La representación será la trampa” es el comienzo de una obra de teatro del dramaturgo húngaro Ferenc Molnár.</p>`,
       questions: [
         {text: "<b>Pregunta 1/7</b><br>¿Qué estaban haciendo los personajes de la obra de teatro justo antes de que se levantase el telón? ",
           name: "pA1",
