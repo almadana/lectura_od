@@ -61,6 +61,7 @@ h1 {
 .instructions {
   font-size: 1.5rem;
   max-width: 30rem;
+  font-family: notosans, sans-serif;
 }
 
 .instructions em {

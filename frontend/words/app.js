@@ -18,7 +18,7 @@ function simulate_key(target, key) {
 
 var welcome = {
   type: 'html-keyboard-response',
-  stimulus: `<h1>Hola</h1>
+  stimulus: `<h1>Prueba de vocabulario</h1>
   <p class='instructions'>
   A continuación te aparecerá una lista de secuencias de letras, y tendrás que decidir si corresponden a palabras del español o no. Para responder que sí, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
   </p>
@@ -212,7 +212,7 @@ for (word of shuffle(words[environment])) {
 
 var goodbye = {
   type: 'html-keyboard-response',
-  stimulus: `<h1>Gracias!</h1>
+  stimulus: `<h1>Muy bien!</h1>
   <p class='instructions next_task_wrapper'>
   <a class='next_task' href='${config[environment].frontend}/autores/index.html?sid=${sid}&gid=${gid}'>Continuar</a>
   </p>

@@ -51,19 +51,19 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
 <dt>TURAI</dt>
 <dd>Créeme, no es tan complicado. Piensa en todo ello como en... </dd>
 <dt>GÁL</dt>
-<dd>De acuerdo, de acuerdo, de acuerdo, no empieces a hablar de teatro otra vez. Estoy harto de ello. Ya hablaremos mañana, si quieres. </dd>
+<dd>De acuerdo, de acuerdo, de acuerdo, no empieces a hablar de teatro otra vez. Estoy harto de ello. Ya hablaremos mañana, si quieres. </dd></dl>
 <p>“La representación será la trampa” es el comienzo de una obra de teatro del dramaturgo húngaro Ferenc Molnár.</p>`,
       questions: [
-        {text: "<b>Pregunta 1/7</b><br>¿Qué estaban haciendo los personajes de la obra de teatro justo antes de que se levantase el telón? ",
+      {text: "<b>Pregunta 1/7</b><br>¿Cuál de los tres personajes es el más joven?",
           name: "pA1",
           options: [
-            {value: "a", text: "Acaban de cenar y de tomar champagne."},
-            {value: "b", text: "Conversan en voz alta tras la puerta."},
-            {value: "c", text: "Le hicieron a Ádám el frac y el esmoquin."},
-            {value: "d", text: "Se preparan para salir al escenario."}
+            {value: "a", text: "Molnár."},
+            {value: "b", text: "Gál."},
+            {value: "c", text: "Turai."},                
+            {value: "d", text: "Adám."}
           ],
         },
-        {text: '<b>Pregunta 2/7</b><br>  “Es una eternidad; a veces pasa hasta un cuarto de hora (...)”. <br>Según Turai, ¿por qué un cuarto de hora es “una eternidad”? ',
+        {text: '<b>Pregunta 2/8</b><br>  “Es una eternidad; a veces pasa hasta un cuarto de hora (...)”. <br>Según Turai, ¿por qué un cuarto de hora es “una eternidad”? ',
           name: "pA2",
           options: [
             {value: "a", text: "Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado."},
@@ -72,7 +72,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."}
           ],
         },
-        {text: "<b>Pregunta 3/7</b><br>En general, ¿qué está haciendo el dramaturgo Molnár en este fragmento?",
+        {text: "<b>Pregunta 3/8</b><br>En general, ¿qué está haciendo el dramaturgo Molnár en este fragmento?",
           name: "pA3",
           options: [
             {value: "a", text: "Está mostrando el modo en que cada personaje va a resolver sus propios problemas."},
@@ -81,42 +81,52 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."}
           ],
         },
-        {text: "<b>Pregunta 4/7</b><br>¿Por qué Turai afirma “Soy dramaturgo. Ésa es mi maldición”?",
+        {text: "<b>Pregunta 4/8</b><br>¿Por qué Turai afirma “Soy dramaturgo. Ésa es mi maldición”?",
           name: "pA4",
           options: [
-            {value: "a", text: "Presentar a los problemas es complicado."},
-            {value: "b", text: "Le fastidia tener que escribir obras de teatro."},
-            {value: "c", text: "No tiene un punto medio, la domina o es su esclavo."},                
-            {value: "d", text: "La puesta en escena significa siempre un problema."}
+            {value: "a", text: "Le resulta complicado plantear las situaciones en la obra."},
+            {value: "b", text: "Le implica un fastidio tener que escribir obras de teatro."},
+            {value: "c", text: "Se siente esclavo de la profesión porque aún no la domina."},                
+            {value: "d", text: "Considera que los personajes significan siempre un problema"}
           ],
         },
-        {text: "<b>Pregunta 5/7</b><br>¿Qué opción corresponde con una de las principales dificultades al leer esta obra teatral? ",
+        {text: "<b>Pregunta 5/8</b><br>¿Qué frase describe mejor una de las principales dificultades al leer esta obra teatral? ",
           name: "pA5",
           options: [
-            {value: "a", text: "Ser consciente de la distinción entre los personajes de la obra y los actores de la misma."},
-            {value: "b", text: "Entender que el desarrollo de la acción revela las intenciones de los personajes."},
-            {value: "c", text: "Interpretar las personalidades sugeridas por los diálogos de los personajes."},                
-            {value: "d", text: "Reconocer la relación existente entre los diálogos y las acotaciones del texto."}
+            {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
+            {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
+            {value: "c", text: "Diferenciar las ocupaciones y las personalidades de Gál, Turai y Ádám."},                
+            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."}
           ],
         },
-        {text: "<b>Pregunta 6/7</b><br>¿Cuál de los tres personajes es el más joven?",
+        {text: `<b>Pregunta 6/8</b><br>¿Qué significa el texto en cursivas en el siguiente parlamento? 
+            <dl><dt>GÁL y TURAI</dt> <dd><i>A la vez.</i>Y este joven...</dd></dl>`,
           name: "pA6",
           options: [
-            {value: "a", text: "Molnár."},
-            {value: "b", text: "Gál."},
-            {value: "c", text: "Turai."},                
-            {value: "d", text: "Adám."}
+            {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
+            {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
+            {value: "c", text: "Diferenciar las ocupaciones y las personalidades de Gál, Turai y Ádám."},                
+            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."}
           ],
         },
-        {text: "<b>Pregunta 7/7</b><br>La metanarrativa es un tipo de literatura en el que un personaje o grupo de personajes son autoconscientes de su naturaleza. El narrador o los personajes sistemáticamente llaman la atención sobre su condición con el fin de plantear preguntas acerca de la relación entre la ficción y la realidad. <br>¿Crees que esta obra de teatro es un ejemplo de este tipo de ficción?",
+        {text: "<b>Pregunta 7/8</b><br>¿Qué estaban haciendo los personajes de la obra de teatro justo antes de que se levantase el telón? ",
           name: "pA7",
+          options: [
+            {value: "a", text: "Acaban de cenar y de tomar champagne."},
+            {value: "b", text: "Conversan en voz alta tras la puerta."},
+            {value: "c", text: "Le hicieron a Ádám el frac y el esmoquin."},
+            {value: "d", text: "Se preparan para salir al escenario."}
+          ],
+        },
+        {text: "<b>Pregunta 8/8</b><br>La metanarrativa es un tipo de literatura en el que un personaje o grupo de personajes son autoconscientes de su naturaleza. El narrador o los personajes sistemáticamente llaman la atención sobre su condición con el fin de plantear preguntas acerca de la relación entre la ficción y la realidad. <br>¿Crees que esta obra de teatro es un ejemplo de este tipo de ficción?",
+          name: "pA8",
           options: [
             {value: "a", text: "No, los personajes están vinculados con el teatro pero no tienen conciencia de su condición."},
             {value: "b", text: "Sí, los actores reconocen su naturaleza en cada intervención."},
             {value: "c", text: "No, los personajes no son actores en una obra de teatro."},                
             {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."}
           ],
-        },
+        }
       ]
     },
     {title: 'Texto 2 - La democracia en Atenas',
