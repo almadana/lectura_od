@@ -52,7 +52,7 @@ for (word of words_training[environment]) {
         </div>
       </div>
     `,
-    data: {sid: sid, correct_response: word[2], target: word[1], word_id: word[0]},
+    data: {sid: sid, gid: gid, correct_response: word[2], target: word[1], word_id: word[0]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];

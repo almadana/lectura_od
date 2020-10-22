@@ -50,12 +50,13 @@ footer .institucion {
 }
 
 .actions .button {
+  background: none;
   border: 3px solid hsl(0,0%,70%);
   border-radius: 10px;
   padding: 1rem;
   text-decoration: none;
   color: hsl(186, 100%, 33%);
-  font-size: 2rem;
+  font: 2rem "comfortaa", sans-serif;
 }
 
 .button.quiero_participar {
