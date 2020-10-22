@@ -12,6 +12,7 @@ end
 DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 words = DB[:words]
 autores = DB[:autores]
+sociodemo = DB[:sociodemo]
 participants = DB[:participants]
 
 #Backend  = "http://192.168.122.144:3000"
@@ -62,15 +63,12 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      row = json_payload.slice('sid', 'group_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      row = json_payload.slice('sid', 'gid', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
       row['created_at'] = Time.now
       DB.transaction do
           words.insert(row)
       end
       msg = "ok"
-      ['200', headers, [msg]]
-    elsif env['REQUEST_METHOD']=="GET"
-      msg = "thanks"
       ['200', headers, [msg]]
     end
   elsif path=="/autores"
@@ -81,15 +79,29 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      row = json_payload.slice('sid', 'group_id', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      row = json_payload.slice('sid', 'gid', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
       row['created_at'] = Time.now
       DB.transaction do
         autores.insert(row)
       end
       msg = "ok"
       ['200', headers, [msg]]
-    elsif env['REQUEST_METHOD']=="GET"
-      msg = "thanks"
+    end
+  elsif path=="/sociodemo"
+    if env['REQUEST_METHOD']=="POST"
+      if payload.length>0
+        json_payload = JSON.parse payload
+      else
+        json_payload = {}
+      end
+
+      row = json_payload.slice('gender', 'fecha_nacimiento', 'lugar_nacimiento', 'nivel_estudios', 'cuanto_lee', 'leer_libros_ultimos_meses', 'leer_revistas_ultimos_meses', 'leer_periodicos_semana_pasada', 'leer_historietas', 'leer_blogs', 'motivo_lectura', 'tiempo_lectura', 'sid', 'gid');
+
+      row['created_at'] = Time.now
+      DB.transaction do
+        sociodemo.insert(row)
+      end
+      msg = "ok"
       ['200', headers, [msg]]
     end
 #  elsif path=="/participant"
