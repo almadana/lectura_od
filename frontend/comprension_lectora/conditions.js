@@ -55,7 +55,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
 <p>“La representación será la trampa” es el comienzo de una obra de teatro del dramaturgo húngaro Ferenc Molnár.</p>`,
       questions: [
       {text: "<b>Pregunta 1/7</b><br>¿Cuál de los tres personajes es el más joven?",
-          name: "pA1",
+          name: "pa1",
           options: [
             {value: "a", text: "Molnár."},
             {value: "b", text: "Gál."},
@@ -65,7 +65,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "d",
         },
         {text: '<b>Pregunta 2/8</b><br>  “Es una eternidad; a veces pasa hasta un cuarto de hora (...)”. <br>Según Turai, ¿por qué un cuarto de hora es “una eternidad”? ',
-          name: "pA2",
+          name: "pa2",
           options: [
             {value: "a", text: "Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado."},
             {value: "b", text: "Parece que se tarda un siglo en aclarar la situación al comienzo de una obra de teatro."},
@@ -75,7 +75,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "b"
         },
         {text: "<b>Pregunta 3/8</b><br>En general, ¿qué está haciendo el dramaturgo Molnár en este fragmento?",
-          name: "pA3",
+          name: "pa3",
           options: [
             {value: "a", text: "Está mostrando el modo en que cada personaje va a resolver sus propios problemas."},
             {value: "b", text: "Está haciendo que sus personajes demuestren cómo es una eternidad en una obra de teatro."},
@@ -85,7 +85,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "d"
         },
         {text: "<b>Pregunta 4/8</b><br>¿Por qué Turai afirma “Soy dramaturgo. Ésa es mi maldición”?",
-          name: "pA4",
+          name: "pa4",
           options: [
             {value: "a", text: "Le resulta complicado plantear las situaciones en la obra."},
             {value: "b", text: "Le implica un fastidio tener que escribir obras de teatro."},
@@ -95,7 +95,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "c",
         },
         {text: "<b>Pregunta 5/8</b><br>¿Qué frase describe mejor una de las principales dificultades al leer esta obra teatral? ",
-          name: "pA5",
+          name: "pa5",
           options: [
             {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
             {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
@@ -106,7 +106,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
         },
         {text: `<b>Pregunta 6/8</b><br>¿Qué significa el texto en cursivas en el siguiente parlamento? 
             <dl><dt>GÁL y TURAI</dt> <dd><i>A la vez.</i>Y este joven...</dd></dl>`,
-          name: "pA6",
+          name: "pa6",
           options: [
             {value: "a", text: "Señala el tipo de relación entre Gál y Turai en su vida profesional."},
             {value: "b", text: "Pone un énfasis en las palabras de los personajes en escena."},
@@ -116,7 +116,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "d",
         },
         {text: "<b>Pregunta 7/8</b><br>¿Qué estaban haciendo los personajes de la obra de teatro justo antes de que se levantase el telón? ",
-          name: "pA7",
+          name: "pa7",
           options: [
             {value: "a", text: "Acaban de cenar y de tomar champagne."},
             {value: "b", text: "Conversan en voz alta tras la puerta."},
@@ -126,7 +126,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "a",
         },
         {text: "<b>Pregunta 8/8</b><br>La metanarrativa es un tipo de literatura en el que un personaje o grupo de personajes son autoconscientes de su naturaleza. El narrador o los personajes sistemáticamente llaman la atención sobre su condición con el fin de plantear preguntas acerca de la relación entre la ficción y la realidad. <br>¿Crees que esta obra de teatro es un ejemplo de este tipo de ficción?",
-          name: "pA8",
+          name: "pa8",
           options: [
             {value: "a", text: "No, los personajes están vinculados con el teatro pero no tienen conciencia de su condición."},
             {value: "b", text: "Sí, los actores reconocen su naturaleza en cada intervención."},
@@ -157,7 +157,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
     Tucídides, Historia de la guerra del Peloponeso (adaptación) `,
       questions: [
         {text: "<b>Pregunta 1/7</b><br>  Uno de los objetivos del discurso de la parte B era honrar a los soldados caídos en el primer año de la guerra del Peloponeso. <br>¿Cuál era OTRO de los objetivos de este discurso?",
-          name: "pB1",
+          name: "pb1",
           options: [
             {value: "a", text: "Explicar las ventajas de la democracia ateniense."},
             {value: "b", text: "Honrar a los soldados muertos"},
@@ -167,7 +167,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "a",
         },
         {text: "<b>Pregunta 2/7</b><br>¿Qué condenó a Tucídides al exilio?",
-          name: "pB2",
+          name: "pb2",
           options: [
             {value: "a", text: "Que no pudiese lograr la victoria de los atenienses en Anfípolis."},
             {value: "b", text: "Que tomase el mando de una flota en Anfípolis."},
@@ -177,7 +177,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "a",
         },
         {text: "<b>Pregunta 3/7</b><br>¿Quién escribió el discurso de la Parte B?",
-          name: "pB3",
+          name: "pb3",
           options: [
             {value: "a", text: "Pericles."},
             {value: "b", text: "Tucídides."},
@@ -187,7 +187,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "b",
         },
         {text: "<b>Pregunta 4/7</b><br>Según el texto, ¿qué diferenciaba a Tucídides de los demás historiadores de su época? ",
-          name: "pB4",
+          name: "pb4",
           options: [
             {value: "a", text: "Escribía sobre personas corrientes, no sobre héroes."},
             {value: "b", text: "Utilizaba anécdotas, más que meros hechos."},
@@ -197,7 +197,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "d",
         },
         {text: "<b>Pregunta 5/7</b><br>Fíjate en este fragmento del texto, que se encuentra casi al final de la Parte B: <p>«Además, nos hemos procurado muchos placeres para el espíritu. Los juegos y sacrificios que celebramos durante todo el año y la elegancia de nuestras casas particulares constituyen una fuente diaria de placer que nos hace olvidar cualquier preocupación.»</p> ¿Cuál de estas frases resume mejor esta parte del texto? ",
-          name: "pB5",
+          name: "pb5",
           options: [
             {value: "a", text: "El sistema de gobierno de Atenas permite a cualquier persona elaborar leyes."},
             {value: "b", text: "La diversión y la belleza son parte de la buena vida que se puede tener en Atenas."},
@@ -207,7 +207,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "b",
         },
         {text: "<b>Pregunta 6/7</b><br>La parte A de La democracia en Atenas sirve para:",
-          name: "pB6",
+          name: "pb6",
           options: [
             {value: "a", text: "Explicar por qué Tucídides se exilió."},
             {value: "b", text: "Brindar información contextual sobre Tucídides."},
@@ -217,7 +217,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
           correct_answer: "b",
         },
         {text: "<b>Pregunta 7/7</b><br>¿Cuál de las descripciones del estilo de Tucídides corresponde con el siguiente fragmento de Historia de la guerra del Peloponeso? <p>«Obedecemos a quienes ponemos a desempeñar cargos públicos y obedecemos las leyes, en especial las dirigidas a la protección de los oprimidos y las leyes no escritas que supone una verdadera vergüenza infringir.»</p>",
-          name: "pB7",
+          name: "pb7",
           options: [
             {value: "a", text: "Tucídides fue un historiador y militar que vivió en el siglo V a. C, durante la época de la Grecia clásica."},
             {value: "b", text: "Se centra más en las causas naturales y en la conducta de cada individuo que en el destino o en la intervención de los dioses para explicar la evolución de la historia."},
