@@ -1,3 +1,7 @@
+const query = new URLSearchParams(window.location.search);
+const sid = query.get('sid')||0;
+const gid = query.get('gid');
+
 function goodbye() {
   const _excercise = document.querySelector(".excercise");
   const _exit = document.querySelector(".exit");
@@ -34,6 +38,12 @@ function next_excercise() {
 }
 
 function next_question() {
+  const _question = document.querySelector(".excercise .question");
+  const _question_body = document.querySelector(".excercise .question .body");
+  const _answer = document.querySelector(".excercise .answer");
+  const data = {sid: sid, gid: gid, question: _question.name, answer: _answer.value}
+console.log(data)
+
   const _excercise = document.querySelector(".excercise");
   let excercise_id = _excercise.dataset.excercise_id;
   let question_id = _excercise.dataset.question_id;
@@ -46,10 +56,6 @@ function next_question() {
   } else {
     var next_question_id = 0;
   }
-
-  const _question = document.querySelector(".excercise .question");
-  const _question_body = document.querySelector(".excercise .question .body");
-  const _answer = document.querySelector(".excercise .answer");
 
   if (trial.questions[next_question_id]) {
     const question = trial.questions[next_question_id];
