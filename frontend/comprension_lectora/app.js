@@ -77,7 +77,6 @@ function jump_question(jump) {
 
   const trial = conditions[environment][excercise_id];
   const question = trial.questions[next_question_id];
-  //  const question = trial.questions[question_id]
 
   if (next_question_id>=trial.questions.length) {
     next_excercise();
