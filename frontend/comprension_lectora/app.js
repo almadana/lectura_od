@@ -41,8 +41,9 @@ function next_question() {
   const _question = document.querySelector(".excercise .question");
   const _question_body = document.querySelector(".excercise .question .body");
   const _answer = document.querySelector(".excercise .answer");
-  const data = {sid: sid, gid: gid, question: _question.name, answer: _answer.value}
-console.log(data)
+  const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value}
+
+  log_data('comprension', data);
 
   const _excercise = document.querySelector(".excercise");
   let excercise_id = _excercise.dataset.excercise_id;

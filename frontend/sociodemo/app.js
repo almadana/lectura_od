@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', evt => {
     const target = event.target;
     const data = Object.fromEntries(new FormData(_form).entries());
     data['fecha_nacimiento'] = `${data['nacimiento_anio']}-${data['nacimiento_mes']}-${data['nacimiento_dia']}`;
-    console.log(data);
 
     log_data('sociodemo', data).then(function() {
       _form.innerHTML="";

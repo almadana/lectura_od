@@ -13,6 +13,7 @@ DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 words = DB[:words]
 autores = DB[:autores]
 sociodemo = DB[:sociodemo]
+comprension = DB[:comprension]
 participants = DB[:participants]
 
 #Backend  = "http://192.168.122.144:3000"
@@ -100,6 +101,22 @@ run Proc.new { |env|
       row['created_at'] = Time.now
       DB.transaction do
         sociodemo.insert(row)
+      end
+      msg = "ok"
+      ['200', headers, [msg]]
+    end
+  elsif path=="/comprension"
+    if env['REQUEST_METHOD']=="POST"
+      if payload.length>0
+        json_payload = JSON.parse payload
+      else
+        json_payload = {}
+      end
+
+      row = json_payload.slice('sid', 'gid', 'question', 'answer')
+      row['created_at'] = Time.now
+      DB.transaction do
+        comprension.insert(row)
       end
       msg = "ok"
       ['200', headers, [msg]]
