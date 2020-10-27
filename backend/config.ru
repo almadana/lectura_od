@@ -14,7 +14,7 @@ words = DB[:words]
 autores = DB[:autores]
 sociodemo = DB[:sociodemo]
 comprension = DB[:comprension]
-participants = DB[:participants]
+#participants = DB[:participants]
 
 #Backend  = "http://192.168.122.144:3000"
 #Frontend = "http://192.168.122.144"
