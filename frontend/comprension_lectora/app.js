@@ -1,6 +1,7 @@
 const query = new URLSearchParams(window.location.search);
 const sid = query.get('sid')||0;
 const gid = query.get('gid');
+var answers = {};
 
 function goodbye() {
   const _excercise = document.querySelector(".excercise");
@@ -37,48 +38,77 @@ function next_excercise() {
   next_question()
 }
 
-function next_question() {
-  const _question = document.querySelector(".excercise .question");
-  const _question_body = document.querySelector(".excercise .question .body");
-  const _answer = document.querySelector(".excercise .answer");
-  const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value}
-
-  log_data('comprension', data);
+function jump_question(jump) {
+  var send_data;
 
   const _excercise = document.querySelector(".excercise");
   let excercise_id = _excercise.dataset.excercise_id;
   let question_id = _excercise.dataset.question_id;
 
-  const trial = conditions[environment][excercise_id];
-  //  const question = trial.questions[question_id]
-
   if (question_id) {
-    var next_question_id = parseInt(question_id) + 1;
+    var next_question_id = parseInt(question_id) + jump;
+    send_data = true;
   } else {
     var next_question_id = 0;
+    send_data = false;
   }
 
-  if (trial.questions[next_question_id]) {
-    const question = trial.questions[next_question_id];
-    _answer.name = question.name;
-    _answer.innerHTML = '';
-    _question_body.innerHTML = question.text;
-
-    let _option = document.createElement("option");
-    _option.value = "";
-    _option.textContent = "";
-    _answer.appendChild(_option);
-
-    for (let option of question.options) {
-      let _option = document.createElement("option");
-      _option.value = option.value;
-      _option.textContent = option.text;
-      _answer.appendChild(_option);
-    }
-    _excercise.dataset.question_id = next_question_id;
+  const _prev_question = document.querySelector("#prev_question");
+  if (next_question_id==0) {
+    _prev_question.disabled = true;
   } else {
-    next_excercise()
+    _prev_question.disabled = false;
   }
+
+  if (next_question_id<0) {
+    next_question_id = 0;
+    return
+  }
+
+  const _question = document.querySelector(".excercise .question");
+  const _question_body = document.querySelector(".excercise .question .body");
+  const _answer = document.querySelector(".excercise .answer");
+
+  if (send_data) {
+    const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value}
+    answers[_answer.name] = _answer.value;
+    log_data('comprension', data);
+  }
+
+  const trial = conditions[environment][excercise_id];
+  const question = trial.questions[next_question_id];
+  //  const question = trial.questions[question_id]
+
+  if (next_question_id>=trial.questions.length) {
+    next_excercise();
+    return
+  }
+
+  _answer.name = question.name;
+  _answer.innerHTML = '';
+  _question_body.innerHTML = question.text;
+
+  let _option = document.createElement("option");
+  _option.value = "";
+  _option.textContent = "";
+  _answer.appendChild(_option);
+
+  for (let option of question.options) {
+    let _option = document.createElement("option");
+    _option.value = option.value;
+    _option.selected = option.value==answers[question.name];
+    _option.textContent = option.text;
+    _answer.appendChild(_option);
+  }
+  _excercise.dataset.question_id = next_question_id;
+}
+
+function next_question() {
+  jump_question(1);
+}
+
+function prev_question() {
+  jump_question(-1);
 }
 
 function welcome() {
@@ -88,13 +118,16 @@ function welcome() {
   _start_task.addEventListener('click', evt=> {
     _welcome.classList.add("hidden");
     _excercise.classList.remove("hidden");
-    next_excercise();
+    next_excercise(0);
   });
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const _next_question = document.querySelector("#next_question");
   _next_question.addEventListener('click', next_question);
+
+  const _prev_question = document.querySelector("#prev_question");
+  _prev_question.addEventListener('click', prev_question);
 
 //  const _prev_question = document.querySelector("#prev_question");
 //  _prev_question.addEventListener('click', prev_question);
