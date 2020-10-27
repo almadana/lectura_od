@@ -1,16 +1,27 @@
 var words_training = {
+  development: [
+    [1,"ventana",'ventana'],
+  ],
+  testing: [
+    [1,"ventana",'ventana'],
+  ],
   production: [
     [1,"ventana",'ventana'],
     [2,"cloru",'NW'],
     [3,"reza",'reza'],
     [4,"feno",'NW']
   ],
-  development: [
-    [1,"ventana",'ventana'],
-  ],
 }
 
 var words = {
+  development: [
+    [1,"terzo", "NW"],
+    [2,"pellizcar", "pinch"],
+  ],
+  testing: [
+    [1,"terzo", "NW"],
+    [2,"pellizcar", "pinch"],
+  ],
   production: [
     [1,"terzo", "NW"],
     [2,"pellizcar", "pinch"],
@@ -102,9 +113,5 @@ var words = {
     [88,"acantilado", "cliff"],
     [89,"prisa", "hurry"],
     [90,"clavel", "carnation"]
-  ],
-  development: [
-    [1,"terzo", "NW"],
-    [2,"pellizcar", "pinch"],
   ],
 };

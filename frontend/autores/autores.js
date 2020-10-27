@@ -1,4 +1,12 @@
 const autores = {
+  development: [
+    ["Pilar Sordo", 0,1],
+    ["E.D. Bulker", 1,2],
+  ],
+  testing: [
+    ["Pilar Sordo", 0,1],
+    ["E.D. Bulker", 1,2],
+  ],
   production: [
     ["Pilar Sordo", 0,1],
     ["E.D. Bulker", 1,2],
@@ -100,9 +108,5 @@ const autores = {
     ["Tute", 1,98],
     ["Ida Vitale", 1,99],
     ["Mariano Del Mazo", 1,100],
-  ],
-  development: [
-    ["Pilar Sordo", 0,1],
-    ["E.D. Bulker", 1,2],
   ],
 }
