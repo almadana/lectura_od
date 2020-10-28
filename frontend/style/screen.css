@@ -143,3 +143,7 @@ form table tbody td {
 .excercise .question_wrap .prev {
   margin-right: 1rem;
 }
+
+.question-title {
+      color: hsl(186, 100%, 33%);
+}

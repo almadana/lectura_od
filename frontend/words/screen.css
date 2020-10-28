@@ -6,8 +6,15 @@
 }
 
 @font-face { 
+  font-family: comfortaa; 
+  src: url(../style/font/comfortaa/Comfortaa-Regular.ttf);
+  font-weight: normal; 
+  font-style: normal;
+}
+
+@font-face { 
   font-family: notosans; 
-  src: url(../style/font/comfortaa/NotoSans-Regular.ttf);
+  src: url(../style/font/notosans/NotoSans-Regular.ttf);
   font-weight: normal; 
   font-style: normal;
 } 
@@ -19,7 +26,26 @@
 
 h1 {
   font-size: 2.5rem;
+  color: hsl(186, 100%, 33%);
+  font-family: comfortaa;
 }
+
+em {
+  color: hsl(186, 100%, 33%);
+  font-weight: bold;
+}
+
+
+.next_task {
+  background: none;
+  border: 3px solid hsl(0,0%,70%);
+  border-radius: 10px;
+  padding: 1rem;
+  text-decoration: none;
+  color: hsl(186, 100%, 33%);
+  font: 2rem "comfortaa", sans-serif;
+}
+
 
 .stimuli_wrapper {
   display: flex;
