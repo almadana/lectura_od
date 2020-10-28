@@ -40,12 +40,18 @@ function next_excercise() {
 
 function jump_question(jump) {
   var send_data;
+  const _answer = document.querySelector(".excercise .answer");
 
   const _excercise = document.querySelector(".excercise");
   let excercise_id = _excercise.dataset.excercise_id;
   let question_id = _excercise.dataset.question_id;
 
   if (question_id) {
+    if (_answer.value=="") {
+      _answer.setAttribute('required', 'on');
+      return
+    }
+
     var next_question_id = parseInt(question_id) + jump;
     send_data = true;
   } else {
@@ -67,7 +73,6 @@ function jump_question(jump) {
 
   const _question = document.querySelector(".excercise .question");
   const _question_body = document.querySelector(".excercise .question .body");
-  const _answer = document.querySelector(".excercise .answer");
 
   if (send_data) {
     const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value, correct_answer: _answer.dataset.correct_answer}
@@ -87,6 +92,7 @@ function jump_question(jump) {
   _answer.dataset.correct_answer = question.correct_answer;
   _answer.innerHTML = '';
   _question_body.innerHTML = question.text;
+  _answer.removeAttribute('required');
 
   let _option = document.createElement("option");
   _option.value = "";
@@ -100,6 +106,7 @@ function jump_question(jump) {
     _option.textContent = option.text;
     _answer.appendChild(_option);
   }
+
   _excercise.dataset.question_id = next_question_id;
 }
 
