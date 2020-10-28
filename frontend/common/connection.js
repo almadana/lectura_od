@@ -20,3 +20,10 @@ function log_data(endpoint, data) {
     body: JSON.stringify(data)
   })
 }
+
+function get_data(endpoint) {
+  var url = `${config[environment].backend}/${endpoint}`;
+  return fetch(url,{
+    method: "GET",
+  })
+}

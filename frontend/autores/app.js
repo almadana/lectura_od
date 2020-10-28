@@ -53,7 +53,7 @@ for (word of shuffle(autores[environment])) {
         </div>
       </div>
     `,
-    data: {sid: sid,gid: gid, correct_response: word[1], target: word[0], word_id: word[2]},
+    data: {sid: sid,gid: gid, target: word[0], es_autor: word[1], word_id: word[2]},
     choices: ['s', 'n'],
     on_finish: function() {
       var datalog = jsPsych.data.get().last(1).values()[0];
@@ -62,7 +62,10 @@ for (word of shuffle(autores[environment])) {
       datalog['key_label'] = key_code_to_label[datalog['key_press']];
       datalog['trial_type'] = "task";
       var score;
-      if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
+      if (
+        (datalog['es_autor']==1 && datalog['key_label']=='s') || 
+        (datalog['es_autor']!=1 && datalog['key_label']!='s')
+      ) {
         score = 1
       } else {
         score = 0

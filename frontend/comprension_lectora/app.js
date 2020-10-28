@@ -70,7 +70,7 @@ function jump_question(jump) {
   const _answer = document.querySelector(".excercise .answer");
 
   if (send_data) {
-    const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value}
+    const data = {sid: sid, gid: gid, question: _answer.name, answer: _answer.value, correct_answer: _answer.dataset.correct_answer}
     answers[_answer.name] = _answer.value;
     log_data('comprension', data);
   }
@@ -84,6 +84,7 @@ function jump_question(jump) {
   }
 
   _answer.name = question.name;
+  _answer.dataset.correct_answer = question.correct_answer;
   _answer.innerHTML = '';
   _question_body.innerHTML = question.text;
 
@@ -121,15 +122,15 @@ function welcome() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (evt) => {
   const _next_question = document.querySelector("#next_question");
   _next_question.addEventListener('click', next_question);
 
   const _prev_question = document.querySelector("#prev_question");
   _prev_question.addEventListener('click', prev_question);
 
-//  const _prev_question = document.querySelector("#prev_question");
-//  _prev_question.addEventListener('click', prev_question);
+  const _button_resultados = document.querySelector(".button_resultados");
+  _button_resultados.href = `${_button_resultados.href}?sid=${sid}`
 
   welcome();
 });

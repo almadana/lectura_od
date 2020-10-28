@@ -61,7 +61,10 @@ for (word of words_training[environment]) {
       datalog['key_label'] = key_code_to_label[datalog['key_press']];
       datalog['trial_type'] = "practice";
       var score;
-      if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
+      if (
+        (datalog['correct_response']=='NW' && datalog['key_label']=='n') || 
+        (datalog['correct_response']!='NW' && datalog['key_label']!='n')
+      ) {
         score = 1
       } else {
         score = 0
@@ -157,7 +160,10 @@ for (word of shuffle(words[environment])) {
       datalog['key_label'] = key_code_to_label[datalog['key_press']];
       datalog['trial_type'] = "task";
       var score;
-      if ((datalog['correct_response']=='NW' && datalog['key_label']=='n') || datalog['key_label']=='s') {
+      if (
+        (datalog['correct_response']=='NW' && datalog['key_label']=='n') || 
+        (datalog['correct_response']!='NW' && datalog['key_label']!='n')
+      ) {
         score = 1
       } else {
         score = 0
