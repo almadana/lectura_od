@@ -19,7 +19,7 @@ DB.create_table :autores do
   String   :trial_type
   Integer  :word_id
   String   :target
-  String   :correct_response
+  String   :es_autor
   String   :key_press
   String   :key_label
   Integer  :score

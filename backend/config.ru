@@ -33,6 +33,23 @@ comprension = DB[:comprension]
 #CORS = {'Access-Control-Allow-Origin': '*'}
 headers = {'Content-Type' => 'text/html', 'Access-Control-Allow-Origin' => '*'}
 
+def get_performance(data)
+  total_score = 0
+  score = 0
+  data.each do |row|
+    total_score+= 1
+    score+= row[:score]
+  end
+
+  if total_score==0
+    performance = 0
+  else
+    performance = score/total_score.to_f
+  end
+
+  return performance
+end
+
 run Proc.new { |env|
   request = Rack::Request.new env
   payload = env['rack.input'].read
@@ -80,7 +97,7 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      row = json_payload.slice('sid', 'gid', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'correct_response', 'key_press', 'key_label', 'score')
+      row = json_payload.slice('sid', 'gid', 'rt', 'time_elapsed', 'trial_index', 'trial_count', 'trial_type', 'word_id', 'target', 'es_autor', 'key_press', 'key_label', 'score')
       row['created_at'] = Time.now
       DB.transaction do
         autores.insert(row)
@@ -113,12 +130,29 @@ run Proc.new { |env|
         json_payload = {}
       end
 
-      row = json_payload.slice('sid', 'gid', 'question', 'answer')
+      row = json_payload.slice('sid', 'gid', 'question', 'answer', 'correct_answer')
       row['created_at'] = Time.now
       DB.transaction do
         comprension.insert(row)
       end
       msg = "ok"
+      ['200', headers, [msg]]
+    end
+  elsif /\/datos_resultados.*/ =~ path
+    sid = request.params["sid"]
+    words_performance = get_performance(words.where(sid: sid).all)
+    autores_performance = get_performance(autores.where(sid: sid).all)
+
+    lectura_scores = {}
+    comprension.where(sid: sid).all.each do |row|
+      score = row[:answer]==row[:correct_answer] ? 1 : 0
+      lectura_scores[row[:question]] = score
+    end
+
+    lectura_performance = get_performance(lectura_scores.values.map {|value| {score: value}})
+
+    if env['REQUEST_METHOD']=="GET"
+      msg = "{\"words_performance\": #{words_performance}, \"autores_performance\": #{autores_performance}, \"lectura_performance\": #{lectura_performance}}"
       ['200', headers, [msg]]
     end
 #  elsif path=="/participant"

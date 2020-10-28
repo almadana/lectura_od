@@ -14,6 +14,7 @@ DB.create_table :comprension do
   String :gid, default: ""
   String :question
   String :answer
+  String :correct_answer
   DateTime :created_at
   DateTime :modified_at
 end
