@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', (evt) => {
   get_data(`datos_resultados?sid=${sid}`).then(response => {
     response.text().then(content=> {
       const data = JSON.parse(content);
+      console.log(data);
 
       const words_performance = data['words_performance'];
       const words_bar = bars(words_performance, words_thresholds);
@@ -117,6 +118,10 @@ document.addEventListener('DOMContentLoaded', (evt) => {
 
       _performance_comprension_lectora.textContent = comprension_lectora_message;
       _comprension_lectora.appendChild(comprension_lectora_bar);
+
+      const global_performance = (comprension_lectora_performance + autores_performance + words_performance)/3;
+      const _global_score = document.querySelector(".puntaje_global");
+      _global_score.textContent = `${Math.round(global_performance*100)}%`;
     })
   })
 })
