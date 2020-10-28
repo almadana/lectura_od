@@ -24,9 +24,9 @@
           </div>
           <div class="respuesta">
             <div class="input_date">
-              <input class="day"   type="number" name="nacimiento_dia" id="" min="1" max="31"/> /
-              <input class="month" type="number" name="nacimiento_mes" id="" min="1" max="12"/> /
-              <input class="year"  type="number" name="nacimiento_anio" id="" min="1900" max="2100"/>
+              <input class="day"   type="number" name="nacimiento_dia" id="" min="1" max="31" required /> /
+              <input class="month" type="number" name="nacimiento_mes" id="" min="1" max="12" required/> /
+              <input class="year"  type="number" name="nacimiento_anio" id="" min="1900" max="2100" required/>
             </div>
           </div>
         </div>
@@ -37,16 +37,16 @@
           <div class="respuesta">
             <ul>
               <li>
-                <input type="radio" value="mujer" name="gender" /> Mujer
+                <input type="radio" value="mujer" name="gender" required /> Mujer
               </li>
               <li>
-                <input type="radio" value="hombre" name="gender" /> Hombre
+                <input type="radio" value="hombre" name="gender" required /> Hombre
               </li>
               <li>
-                <input type="radio" value="no_contesta" name="gender" /> Prefiero no aclarar
+                <input type="radio" value="no_contesta" name="gender" required /> Prefiero no aclarar
               </li>
               <li>
-                <input type="radio" value="otro" name="gender" /> Prefiero describirme: <input type="text" value="" name="genero_otro" />
+                <input type="radio" value="otro" name="gender" required /> Prefiero describirme: <input type="text" value="" name="genero_otro" />
               </li>
             </ul>
           </div>
@@ -57,9 +57,9 @@
           </div>
           <div class="respuesta">
             <ul>
-              <li><input type="radio" value="uruguay" name="lugar_nacimiento" />Uruguay</li>
-              <li><input type="radio" value="argentina" name="lugar_nacimiento" />Argentina</li>
-              <li><input type="radio" value="otro" name="lugar_nacimiento" />Otro</li>
+              <li><input type="radio" value="uruguay" name="lugar_nacimiento" required />Uruguay</li>
+              <li><input type="radio" value="argentina" name="lugar_nacimiento" required />Argentina</li>
+              <li><input type="radio" value="otro" name="lugar_nacimiento" required />Otro</li>
             </ul>
           </div>
         </div>
@@ -70,22 +70,22 @@
           <div class="respuesta">
             <ul>
               <li>
-                <input type="radio" value="posgrado" name="nivel_estudios" />
+                <input type="radio" value="posgrado" name="nivel_estudios" required />
                 Posgrado
               </li>
-              <li><input type="radio" value="grado" name="nivel_estudios" />
+              <li><input type="radio" value="grado" name="nivel_estudios" required />
                 Grado
               </li>
-              <li><input type="radio" value="bachillerato" name="nivel_estudios" />
+              <li><input type="radio" value="bachillerato" name="nivel_estudios" required />
                 Bachillerato
               </li>
-              <li><input type="radio" value="secundaria" name="nivel_estudios" />
+              <li><input type="radio" value="secundaria" name="nivel_estudios" required />
                 Secundaria
               </li>
-              <li><input type="radio" value="primaria" name="nivel_estudios" />
+              <li><input type="radio" value="primaria" name="nivel_estudios" required />
                 Primaria
               </li>
-              <li><input type="radio" value="incompleta" name="nivel_estudios" />
+              <li><input type="radio" value="incompleta" name="nivel_estudios" required />
                 No completé educación primaria
               </li>
             </ul>
@@ -97,16 +97,16 @@
           </div>
           <div class="respuesta">
             <ul>
-              <li><input type="radio" value="rango_1" name="cuanto_lee" />
+              <li><input type="radio" value="rango_1" name="cuanto_lee" required />
                 0-10 libros
               </li>
-              <li><input type="radio" value="rango_2" name="cuanto_lee" />
+              <li><input type="radio" value="rango_2" name="cuanto_lee" required />
                 11-25 libros
               </li>
-              <li><input type="radio" value="rango_3" name="cuanto_lee" />
+              <li><input type="radio" value="rango_3" name="cuanto_lee" required />
                 26-100 libros
               </li>
-              <li><input type="radio" value="rango_4" name="cuanto_lee" />
+              <li><input type="radio" value="rango_4" name="cuanto_lee" required />
                 Más de 100 libros
               </li>
             </ul>
@@ -129,10 +129,10 @@
                     Leíste libros en los últimos doce meses
                   </td>
                   <td>
-                    <input type="radio" value="leer_libros_ultimos_meses_si" name="leer_libros_ultimos_meses" />
+                    <input type="radio" value="leer_libros_ultimos_meses_si" name="leer_libros_ultimos_meses" required />
                   </td>
                   <td>
-                    <input type="radio" value="leer_libros_ultimos_meses_no" name="leer_libros_ultimos_meses" />
+                    <input type="radio" value="leer_libros_ultimos_meses_no" name="leer_libros_ultimos_meses" required />
                   </td>
                 </tr>
                 <tr>
@@ -140,10 +140,10 @@
                     Leíste revistas en los últimos tres meses
                   </td>
                   <td>
-                    <input type="radio" value="leer_revistas_ultimos_meses_si" name="leer_revistas_ultimos_meses" />
+                    <input type="radio" value="leer_revistas_ultimos_meses_si" name="leer_revistas_ultimos_meses" required />
                   </td>
                   <td>
-                    <input type="radio" value="leer_revistas_ultimos_meses_no" name="leer_revistas_ultimos_meses" />
+                    <input type="radio" value="leer_revistas_ultimos_meses_no" name="leer_revistas_ultimos_meses" required />
                   </td>
                 </tr>
                 <tr>
@@ -151,10 +151,10 @@
                     Leíste periódicos la semana pasada
                   </td>
                   <td>
-                    <input type="radio" value="leer_periodicos_semana_pasada_si" name="leer_periodicos_semana_pasada" />
+                    <input type="radio" value="leer_periodicos_semana_pasada_si" name="leer_periodicos_semana_pasada" required />
                   </td>
                   <td>
-                    <input type="radio" value="leer_periodicos_semana_pasada_no" name="leer_periodicos_semana_pasada" />
+                    <input type="radio" value="leer_periodicos_semana_pasada_no" name="leer_periodicos_semana_pasada" required />
                   </td>
                 </tr>
                 <tr>
@@ -162,10 +162,10 @@
                     Lees historietas, tiras cómicas o novelas gráficas
                   </td>
                   <td>
-                    <input type="radio" value="leer_historietas_si" name="leer_historietas" />
+                    <input type="radio" value="leer_historietas_si" name="leer_historietas" required />
                   </td>
                   <td>
-                    <input type="radio" value="leer_historietas_no" name="leer_historietas" />
+                    <input type="radio" value="leer_historietas_no" name="leer_historietas" required />
                   </td>
                 </tr>
                 <tr>
@@ -173,10 +173,10 @@
                     Lees blogs o foros (sin contar publicaciones de Facebook o Twitter)
                   </td>
                   <td>
-                    <input type="radio" value="leer_blogs_si" name="leer_blogs" />
+                    <input type="radio" value="leer_blogs_si" name="leer_blogs" required />
                   </td>
                   <td>
-                    <input type="radio" value="leer_blogs_si" name="leer_blogs" />
+                    <input type="radio" value="leer_blogs_si" name="leer_blogs" required />
                   </td>
                 </tr>
               </tbody>
@@ -191,22 +191,22 @@
           </div>
           <div class="respuesta">
             <ul>
-              <li><input type="radio" value="trabajo" name="motivo_lectura" />
+              <li><input type="radio" value="trabajo" name="motivo_lectura" required />
                 Trabajo
               </li>
-              <li><input type="radio" value="estudio" name="motivo_lectura" />
+              <li><input type="radio" value="estudio" name="motivo_lectura" required />
                 Estudio
               </li>
-              <li><input type="radio" value="cultura_general" name="motivo_lectura" />
+              <li><input type="radio" value="cultura_general" name="motivo_lectura" required />
                 Cultura general o actualización
               </li>
-              <li><input type="radio" value="entretenimiento" name="motivo_lectura" />
+              <li><input type="radio" value="entretenimiento" name="motivo_lectura" required />
                 Entretenimiento
               </li>
-              <li><input type="radio" value="religion" name="motivo_lectura" />
+              <li><input type="radio" value="religion" name="motivo_lectura" required />
                 Religión
               </li>
-              <li><input type="radio" value="otro" name="motivo_lectura" />
+              <li><input type="radio" value="otro" name="motivo_lectura" required />
                 Otro
               </li>
             </ul>
@@ -218,16 +218,16 @@
           </div>
           <div class="respuesta">
             <ul>
-              <li><input type="radio" value="rango_1" name="tiempo_lectura" />
+              <li><input type="radio" value="rango_1" name="tiempo_lectura" required />
                 1 a 30 minutos
               </li>
-              <li><input type="radio" value="rango_2" name="tiempo_lectura" />
+              <li><input type="radio" value="rango_2" name="tiempo_lectura" required />
                 31 a 60 minutos
               </li>
-              <li><input type="radio" value="rango_3" name="tiempo_lectura" />
+              <li><input type="radio" value="rango_3" name="tiempo_lectura" required />
                 Entre 1 y 2 horas
               </li>
-              <li><input type="radio" value="rango_4" name="tiempo_lectura" />
+              <li><input type="radio" value="rango_4" name="tiempo_lectura" required />
                 Entre 2 y 4 horas
               </li>
             </ul>
