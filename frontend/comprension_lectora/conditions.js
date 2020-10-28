@@ -60,7 +60,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Molnár."},
             {value: "b", text: "Gál."},
             {value: "c", text: "Turai."},                
-            {value: "d", text: "Adám."}
+            {value: "d", text: "Adám."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -70,7 +71,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado."},
             {value: "b", text: "Parece que se tarda un siglo en aclarar la situación al comienzo de una obra de teatro."},
             {value: "c", text: "Siempre parece que a un dramaturgo le lleva mucho tiempo escribir el comienzo de una obra de teatro."},                
-            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."}
+            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b"
         },
@@ -80,7 +82,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Está mostrando el modo en que cada personaje va a resolver sus propios problemas."},
             {value: "b", text: "Está haciendo que sus personajes demuestren cómo es una eternidad en una obra de teatro."},
             {value: "c", text: "Está dando un ejemplo de una típica y tradicional escena inicial de una obra de teatro."},                
-            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."}
+            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d"
         },
@@ -90,7 +93,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Le resulta complicado plantear las situaciones en la obra."},
             {value: "b", text: "Le implica un fastidio tener que escribir obras de teatro."},
             {value: "c", text: "Se siente esclavo de la profesión porque aún no la domina."},                
-            {value: "d", text: "Considera que los personajes significan siempre un problema."}
+            {value: "d", text: "Considera que los personajes significan siempre un problema."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "c",
         },
@@ -100,7 +104,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
             {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
             {value: "c", text: "Diferenciar las ocupaciones y las personalidades de Gál, Turai y Ádám."},                
-            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."}
+            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -111,7 +116,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Señala el tipo de relación entre Gál y Turai en su vida profesional."},
             {value: "b", text: "Pone un énfasis en las palabras de los personajes en escena."},
             {value: "c", text: "Es un parlamento que dicen Gál y Turai al hablar con Ádám."},                
-            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."}
+            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -121,7 +127,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Acaban de cenar y de tomar champagne."},
             {value: "b", text: "Conversan en voz alta tras la puerta."},
             {value: "c", text: "Le hicieron a Ádám el frac y el esmoquin."},
-            {value: "d", text: "Se preparan para salir al escenario."}
+            {value: "d", text: "Se preparan para salir al escenario."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -131,7 +138,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "No, los personajes están vinculados con el teatro pero no tienen conciencia de su condición."},
             {value: "b", text: "Sí, los actores reconocen su naturaleza en cada intervención."},
             {value: "c", text: "No, los personajes no son actores en una obra de teatro."},                
-            {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."}
+            {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         }
@@ -162,7 +170,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Explicar las ventajas de la democracia ateniense."},
             {value: "b", text: "Honrar a los soldados muertos"},
             {value: "c", text: "Atenas es el tema del discurso."},                
-            {value: "d", text: "Desarrollar las causas de la derrota ateniense."}
+            {value: "d", text: "Desarrollar las causas de la derrota ateniense."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -173,6 +182,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Que tomase el mando de una flota en Anfípolis."},
             {value: "c", text: "Que recogiese información de los dos bandos en conflicto."},
             {value: "d", text: "Que desertase de los atenienses para luchar con los espartanos."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -183,6 +193,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Tucídides."},
             {value: "c", text: "El historiador espartano."},
             {value: "d", text: "Un guerrero ateniense."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -193,6 +204,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Utilizaba anécdotas, más que meros hechos."},
             {value: "c", text: "Explicaba sucesos históricos haciendo referencia a sus causas sobrenaturales."},
             {value: "d", text: "Se centraba en lo que llevaba a las personas a actuar del modo en que lo hacían."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -203,6 +215,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "La diversión y la belleza son parte de la buena vida que se puede tener en Atenas."},
             {value: "c", text: "Los atenienses viven rodeados de un lujo excesivo y no pueden tomarse la vida en serio."},
             {value: "d", text: "La vida pública y privada son consideradas como una misma cosa."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -213,6 +226,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Brindar información contextual sobre Tucídides."},
             {value: "c", text: "Enumerar las razones por las cuales Tucídides cita a Pericles."},
             {value: "d", text: "Describir la época en la cual Tucídides ejerció su profesión."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -223,6 +237,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Se centra más en las causas naturales y en la conducta de cada individuo que en el destino o en la intervención de los dioses\n para explicar la evolución de la historia."},
             {value: "c", text: "Esta circunstancia le dio la oportunidad de recoger información bastante completa de los dos bandos en conflicto."},
             {value: "d", text: "En su obra, los hechos no se presentan como meras anécdotas, sino que se explican tratando de descubrir los motivos que llevaron\n  a los protagonistas a actuar del modo en que lo hicieron."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -520,7 +535,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Molnár."},
             {value: "b", text: "Gál."},
             {value: "c", text: "Turai."},                
-            {value: "d", text: "Adám."}
+            {value: "d", text: "Adám."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -530,7 +546,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado."},
             {value: "b", text: "Parece que se tarda un siglo en aclarar la situación al comienzo de una obra de teatro."},
             {value: "c", text: "Siempre parece que a un dramaturgo le lleva mucho tiempo escribir el comienzo de una obra de teatro."},                
-            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."}
+            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b"
         },
@@ -540,7 +557,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Está mostrando el modo en que cada personaje va a resolver sus propios problemas."},
             {value: "b", text: "Está haciendo que sus personajes demuestren cómo es una eternidad en una obra de teatro."},
             {value: "c", text: "Está dando un ejemplo de una típica y tradicional escena inicial de una obra de teatro."},                
-            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."}
+            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d"
         },
@@ -550,7 +568,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Le resulta complicado plantear las situaciones en la obra."},
             {value: "b", text: "Le implica un fastidio tener que escribir obras de teatro."},
             {value: "c", text: "Se siente esclavo de la profesión porque aún no la domina."},                
-            {value: "d", text: "Considera que los personajes significan siempre un problema."}
+            {value: "d", text: "Considera que los personajes significan siempre un problema."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "c",
         },
@@ -560,7 +579,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
             {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
             {value: "c", text: "Diferenciar las ocupaciones y las personalidades de Gál, Turai y Ádám."},                
-            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."}
+            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -571,7 +591,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Señala el tipo de relación entre Gál y Turai en su vida profesional."},
             {value: "b", text: "Pone un énfasis en las palabras de los personajes en escena."},
             {value: "c", text: "Es un parlamento que dicen Gál y Turai al hablar con Ádám."},                
-            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."}
+            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -581,7 +602,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Acaban de cenar y de tomar champagne."},
             {value: "b", text: "Conversan en voz alta tras la puerta."},
             {value: "c", text: "Le hicieron a Ádám el frac y el esmoquin."},
-            {value: "d", text: "Se preparan para salir al escenario."}
+            {value: "d", text: "Se preparan para salir al escenario."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -591,7 +613,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "No, los personajes están vinculados con el teatro pero no tienen conciencia de su condición."},
             {value: "b", text: "Sí, los actores reconocen su naturaleza en cada intervención."},
             {value: "c", text: "No, los personajes no son actores en una obra de teatro."},                
-            {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."}
+            {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         }
@@ -622,7 +645,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Explicar las ventajas de la democracia ateniense."},
             {value: "b", text: "Honrar a los soldados muertos"},
             {value: "c", text: "Atenas es el tema del discurso."},                
-            {value: "d", text: "Desarrollar las causas de la derrota ateniense."}
+            {value: "d", text: "Desarrollar las causas de la derrota ateniense."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -633,6 +657,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Que tomase el mando de una flota en Anfípolis."},
             {value: "c", text: "Que recogiese información de los dos bandos en conflicto."},
             {value: "d", text: "Que desertase de los atenienses para luchar con los espartanos."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
@@ -643,6 +668,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Tucídides."},
             {value: "c", text: "El historiador espartano."},
             {value: "d", text: "Un guerrero ateniense."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -653,6 +679,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Utilizaba anécdotas, más que meros hechos."},
             {value: "c", text: "Explicaba sucesos históricos haciendo referencia a sus causas sobrenaturales."},
             {value: "d", text: "Se centraba en lo que llevaba a las personas a actuar del modo en que lo hacían."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -663,6 +690,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "La diversión y la belleza son parte de la buena vida que se puede tener en Atenas."},
             {value: "c", text: "Los atenienses viven rodeados de un lujo excesivo y no pueden tomarse la vida en serio."},
             {value: "d", text: "La vida pública y privada son consideradas como una misma cosa."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -673,6 +701,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Brindar información contextual sobre Tucídides."},
             {value: "c", text: "Enumerar las razones por las cuales Tucídides cita a Pericles."},
             {value: "d", text: "Describir la época en la cual Tucídides ejerció su profesión."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
         },
@@ -683,6 +712,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "b", text: "Se centra más en las causas naturales y en la conducta de cada individuo que en el destino o en la intervención de los dioses\n para explicar la evolución de la historia."},
             {value: "c", text: "Esta circunstancia le dio la oportunidad de recoger información bastante completa de los dos bandos en conflicto."},
             {value: "d", text: "En su obra, los hechos no se presentan como meras anécdotas, sino que se explican tratando de descubrir los motivos que llevaron\n  a los protagonistas a actuar del modo en que lo hicieron."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
