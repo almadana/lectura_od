@@ -118,7 +118,7 @@ form table tbody td {
 }
 
 .excercise .text {
-//  white-space: pre-wrap;
+/*  white-space: pre-wrap; */
     font-family: "serif";
 }
 
@@ -148,4 +148,8 @@ form table tbody td {
   border-top : 1px solid black;
   margin-top: 1rem;
   padding-top: 1rem;
+}
+
+.question-title {
+  color: hsl(186, 100%, 33%);
 }

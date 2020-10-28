@@ -20,10 +20,10 @@ var welcome = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Prueba de vocabulario</h1>
   <p class='instructions'>
-  A continuación te aparecerá una lista de secuencias de letras, y tendrás que decidir si corresponden a palabras del español o no. Para responder que sí, presiona la tecla <em>'s'</em> del teclado, y para responder que no la tecla <em>'n'</em>
+  A continuación te aparecerá una lista de secuencias de letras, y tendrás que decidir si corresponden a palabras del español o no. Para responder que <b>sí</b>, presiona la tecla <em>'s'</em> del teclado y para responder que <b>no</b>, la tecla <em>'n'</em>.
   </p>
   <p class='instructions'>
-  Para comenzar con una prueba, presiona la tecla <em>espacio</em>
+  Para comenzar con una prueba, presiona la tecla <em>espacio</em>.
   </p>
   `,
   choices: ['space'],

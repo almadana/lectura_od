@@ -54,7 +54,7 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
 <dd>De acuerdo, de acuerdo, de acuerdo, no empieces a hablar de teatro otra vez. Estoy harto de ello. Ya hablaremos mañana, si quieres. </dd></dl>
 <p>“La representación será la trampa” es el comienzo de una obra de teatro del dramaturgo húngaro Ferenc Molnár.</p>`,
       questions: [
-      {text: "<b>Pregunta 1/7</b><br>¿Cuál de los tres personajes es el más joven?",
+      {text: "<b class='question-title'>Pregunta 1/7</b><br>¿Cuál de los tres personajes es el más joven?",
           name: "pa1",
           options: [
             {value: "a", text: "Molnár."},
