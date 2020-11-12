@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', (evt) => {
   get_data(`datos_resultados?sid=${sid}`).then(response => {
     response.text().then(content=> {
       const data = JSON.parse(content);
-      console.log(data);
 
       const words_performance = data['words_performance'];
       const words_bar = bars(words_performance, words_thresholds);

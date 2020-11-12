@@ -12,7 +12,6 @@ const gid = query.get('gid');
 
 function simulate_key(target, key) {
   const code = key.charCodeAt(0) - 32;
-  console.log("===", `-${key}-`, key.charCodeAt(0), code);
   document.body.dispatchEvent(new KeyboardEvent('keydown',{'key':key, 'keyCode': code}));
   document.body.dispatchEvent(new KeyboardEvent('keyup',{'key':key, 'keyCode': code}));
 }
