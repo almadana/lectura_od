@@ -124,7 +124,7 @@ var goodbye = {
   <p class='instructions'>
   </p>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='${config[environment].frontend}/comprension_lectora/index.html?sid=${sid}&gid=${gid}'>Continuar</a>
+  <a class='next_task' href='${config[environment].frontend}/resultados/index.html?sid=${sid}&gid=${gid}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS

@@ -14,8 +14,6 @@ function append_ids(target) {
   _gid.name = "gid";
   _gid.value = gid;
   target.appendChild(_gid);
-
-  console.log(target);
 };
 
 document.addEventListener('DOMContentLoaded', evt => {
@@ -29,10 +27,9 @@ document.addEventListener('DOMContentLoaded', evt => {
     const data = Object.fromEntries(new FormData(_form).entries());
     data['fecha_nacimiento'] = `${data['nacimiento_anio']}-${data['nacimiento_mes']}-${data['nacimiento_dia']}`;
 
-    log_data('sociodemo', data).then(function() {
-      _form.innerHTML="";
-      append_ids(_form);
-      target.submit()
-    });
+    log_data('sociodemo', data);
+    _form.innerHTML="";
+    append_ids(_form);
+    target.submit()
   })
 })

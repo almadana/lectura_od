@@ -220,7 +220,7 @@ var goodbye = {
   type: 'html-keyboard-response',
   stimulus: `<h1>Muy bien!</h1>
   <p class='instructions next_task_wrapper'>
-  <a class='next_task' href='${config[environment].frontend}/autores/index.html?sid=${sid}&gid=${gid}'>Continuar</a>
+  <a class='next_task' href='${config[environment].frontend}/comprension2/index.html?sid=${sid}&gid=${gid}'>Continuar</a>
   </p>
   `,
   choices: jsPsych.NO_KEYS
