@@ -11,9 +11,9 @@ const sid = query.get('sid')||0;
 const gid = query.get('gid')||"";
 
 function simulate_key(target, key) {
-  console.log(target);
-  console.log("simulating key ", key);
-  target.dispatchEvent(new KeyboardEvent('keypress',{'key':key}));
+  const code = key.charCodeAt(0) - 32;
+  document.body.dispatchEvent(new KeyboardEvent('keydown',{'key':key, 'keyCode': code}));
+  document.body.dispatchEvent(new KeyboardEvent('keyup',{'key':key, 'keyCode': code}));
 }
 
 var welcome = {
@@ -23,7 +23,10 @@ var welcome = {
   A continuación te aparecerá una lista de nombres, y tendrás que decidir si corresponden a autores o no. Para responder que <b>sí</b>, presiona la tecla <em>'s'</em> del teclado y para responder que <b>no</b>, la tecla <em>'n'</em>.
   </p>
   <p class='instructions'>
-  Para comenzar con una prueba presiona la tecla <em>espacio</em>.
+    Para comenzar con una prueba presiona la tecla <em>espacio</em>.
+  </p>
+  <p class='options'>
+    <button class='option' type='button' onclick='simulate_key(this, "@");'>Continuar</button>
   </p>
   `,
   choices: ['space'],

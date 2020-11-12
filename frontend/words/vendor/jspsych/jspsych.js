@@ -1979,6 +1979,7 @@ jsPsych.pluginAPI = (function() {
   var held_keys = {};
 
   var root_keydown_listener = function(e){
+    console.log("---", e.keyCode);
     for(var i=0; i<keyboard_listeners.length; i++){
       keyboard_listeners[i].fn(e);
     }
