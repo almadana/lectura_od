@@ -8,8 +8,25 @@
     <link href="screen.css" rel="stylesheet" type="text/css"></link>
   </head>
   <body>
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="fHJ7e7z4"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="aQfrn0mb"></script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
     <main>
       <div class="resultados">
@@ -29,6 +46,9 @@
           <div class="compartir">
             <div class="fb-share-button" data-href="http://digital.psico.edu.uy/lectura?gid=fb_share" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdigital.psico.edu.uy%2Flectura%3Fgid%3Dfb_share&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
             </div>
+            <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet"
+  data-size="large" data-text="Hice esta prueba de comprensión lectora y vocabulario y me fue bien. Hacela vos también!" data-url="http://digital.psico.edu.uy/lectura?gid=tw_share" data-via="lexicon_uy">Tuitear</a>
             
           </div>
         </div>
