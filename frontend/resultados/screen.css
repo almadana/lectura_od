@@ -137,6 +137,17 @@ h1 {
   flex-direction: row;
 }
 
+
+h3 {
+  font-size: 1rem;
+  color: hsl(186, 100%, 33%);
+  font-family: comfortaa;
+}
+
+h2 {
+   color: hsl(186, 100%, 33%);
+}
+
 .resultados .resultados_body .intro_text {
   flex: 1 1 10rem;
   text-align: justify;
