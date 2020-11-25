@@ -122,25 +122,62 @@ form table tbody td {
     font-family: "serif";
 }
 
-.excercise .question_wrap {
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  background: #dddddd;
-  padding: 1rem;
-  border-top: 1px solid black;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  font-family: "serif";
+.excercise.long_question .title {
+  display: none;
 }
 
-.excercise .question_wrap .next {
+.excercise.long_question .text {
+  display: none;
+}
+
+.excercise.long_question .question_wrap {
+  height: 90vh;
+  bottom: auto;
+  top: 0px;
+  padding: 1rem 0.2rem 0.2rem 0.2rem;
+}
+
+.excercise .question_wrap {
+  position: fixed;
+  bottom: 0px;
+  overflow-y:scroll;
+  left: 0px;
+  background: #dddddd;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-top: 1px solid black;
+  width: 100%;
+  font-family: "serif";
+  text-align: center;
+}
+
+.excercise .question_wrap_main {
+  display: flex;
+  justify-content: center;
+}
+
+.excercise.long_question .question_wrap .question_wrap_header {
+  display: none;
+}
+
+.excercise.short_question .question_wrap .question_wrap_main {
+  display: none;
+}
+
+.excercise.short_question .question_wrap .question_wrap_footer {
+  display: none;
+}
+
+.excercise .question_wrap .question_wrap_main .answer {
+  text-align: left;
+}
+
+.excercise .question_wrap_main .next {
+  flex: 0 1 5rem;
   margin-left: 1rem;
 }
 
-.excercise .question_wrap .prev {
+.excercise .question_wrap_main .prev {
+  flex: 0 1 5rem;
   margin-right: 1rem;
 }
 
@@ -152,4 +189,15 @@ form table tbody td {
 
 .question-title {
   color: hsl(186, 100%, 33%);
+}
+
+@media (min-width: 1200px) {
+  .excercise .question_wrap_header {
+    display: none;
+  }
+
+  .excercise.short_question .question_wrap .question_wrap_main,
+  .excercise.long_question .question_wrap .question_wrap_main {
+    display: flex;
+  }
 }

@@ -21,27 +21,34 @@
           <button type="button" class="button start_task">Comenzar</button>
         </div>
       </div>
-      <div class="excercise hidden">
+      <div class="excercise hidden short_question">
         <h2 class="title">
         </h2>
         <div class="text">
         </div>
-        <div class="question_wrap">
-          <div class="prev">
-            <button type="button" id="prev_question">< Anterior</button>
+        <div class="question_wrap short">
+          <div class="question_wrap_header">
+            <button id="show_question">Ver pregunta</button>
           </div>
-          <div class="question">
-            <div class="body">
+          <div class="question_wrap_footer">
+            <button id="hide_question">Ver texto</button>
+          </div>
+          <div class="question_wrap_main">
+            <div class="prev">
+              <button type="button" id="prev_question">&lt;Anterior</button>
             </div>
-            <select name="answer" class="answer">
-            </select>
-          </div>
-          <div class="next">
-            <button type="button" id="next_question">Siguiente ></button>
+            <div class="question">
+              <div class="body">
+              </div>
+              <div class="answer">
+              </div>
+            </div>
+            <div class="next">
+              <button type="button" id="next_question">Siguiente&gt;</button>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="exit hidden">
         <h2>Gracias!</h2>
         <div class="actions">
