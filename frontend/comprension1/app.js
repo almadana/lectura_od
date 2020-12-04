@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', (evt) => {
   _hide_question.addEventListener('click', evt => evt.target.dispatchEvent(new CustomEvent("toggle_question", {bubbles: true})));
 
   const _button_resultados = document.querySelector(".button_resultados");
-  _button_resultados.href = `${_button_resultados.href}?sid=${sid}`
+  _button_resultados.href = `${_button_resultados.href}?sid=${sid}&gid=${gid}`
 
   welcome();
 });
