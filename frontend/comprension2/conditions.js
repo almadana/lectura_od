@@ -24,8 +24,8 @@ const conditions = {
           options: [
             {value: "a", text: "Explicar las ventajas de la democracia ateniense."},
             {value: "b", text: "Honrar a los soldados muertos"},
-            {value: "c", text: "Atenas es el tema del discurso."},                
-            {value: "d", text: "Desarrollar las causas de la derrota ateniense."},
+            {value: "c", text: "Recoger información sobre el bando en conflicto."},                
+            {value: "d", text: "Describir la guerra del Peloponeso."},
             {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
@@ -41,13 +41,13 @@ const conditions = {
           ],
           correct_answer: "a",
         },
-        {text: "<b class='question-title'>Pregunta 3/7</b><br>¿Quién escribió el discurso de la Parte B?",
+        {text: "<b class='question-title'>Pregunta 3/7</b><br>¿Gracias a quién conocemos el discurso en honor a los soldados de la Parte B?",
           name: "pb3",
           options: [
             {value: "a", text: "Pericles."},
             {value: "b", text: "Tucídides."},
             {value: "c", text: "El historiador espartano."},
-            {value: "d", text: "Un guerrero ateniense."},
+            {value: "d", text: "El dirigente de los soldados."},
             {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b",
@@ -55,7 +55,7 @@ const conditions = {
         {text: "<b class='question-title'>Pregunta 4/7</b><br>Según el texto, ¿qué diferenciaba a Tucídides de los demás historiadores de su época? ",
           name: "pb4",
           options: [
-            {value: "a", text: "Escribía sobre personas corrientes, no sobre héroes."},
+            {value: "a", text: "Escribía sobre los héroes de la guerra y la influencia de los dioses."},
             {value: "b", text: "Utilizaba anécdotas, más que meros hechos."},
             {value: "c", text: "Explicaba sucesos históricos haciendo referencia a sus causas sobrenaturales."},
             {value: "d", text: "Se centraba en lo que llevaba a las personas a actuar del modo en que lo hacían."},
@@ -85,13 +85,13 @@ const conditions = {
           ],
           correct_answer: "b",
         },
-        {text: "<b class='question-title'>Pregunta 7/7</b><br>¿Cuál de las descripciones del estilo de Tucídides corresponde con el siguiente fragmento de <i>Historia de la guerra del Peloponeso?</i> <p>«Obedecemos a quienes ponemos a desempeñar cargos públicos y obedecemos las leyes, en especial las dirigidas a la protección de los oprimidos y las leyes no escritas que supone una verdadera vergüenza infringir.»</p>",
+        {text: "<b class='question-title'>Pregunta 7/7</b><br>El fragmento de Historia de la guerra del Peloponeso que se presenta en la parte B permite observar que Tucídides:</p>",
           name: "pb7",
           options: [
-            {value: "a", text: "Tucídides fue un historiador y militar que vivió en el siglo V a. C, durante la época de la Grecia clásica."},
-            {value: "b", text: "Se centra más en las causas naturales y en la conducta de cada individuo que en el destino o en la intervención de los dioses\n para explicar la evolución de la historia."},
-            {value: "c", text: "Esta circunstancia le dio la oportunidad de recoger información bastante completa de los dos bandos en conflicto."},
-            {value: "d", text: "En su obra, los hechos no se presentan como meras anécdotas, sino que se explican tratando de descubrir los motivos que llevaron\n  a los protagonistas a actuar del modo en que lo hicieron."},
+            {value: "a", text: "Fue un militar que vivió durante la guerra del Peloponeso."},
+            {value: "b", text: "Se centra en la intervención de los dioses para explicar la evolución de la Historia."},
+            {value: "c", text: "Tuvo la oportunidad de recoger información bastante completa de los dos bandos en conflicto."},
+            {value: "d", text: "Explica los hechos históricos analizando los intereses políticos, económicos y bélicos de los grupos de poder."},
             {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",

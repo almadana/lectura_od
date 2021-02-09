@@ -207,7 +207,8 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Molnár."},
             {value: "b", text: "Gál."},
             {value: "c", text: "Turai."},                
-            {value: "d", text: "Adám."}
+            {value: "d", text: "Adám."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
@@ -217,17 +218,19 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Es mucho tiempo para esperar a que el público se quede quieto en un teatro abarrotado."},
             {value: "b", text: "Parece que se tarda un siglo en aclarar la situación al comienzo de una obra de teatro."},
             {value: "c", text: "Siempre parece que a un dramaturgo le lleva mucho tiempo escribir el comienzo de una obra de teatro."},                
-            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."}
+            {value: "d", text: "Parece que el tiempo avanza lentamente cuando ocurre un suceso importante en una obra de teatro."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "b"
         },
         {text: "<b class='question-title'>Pregunta 3/8</b><br>En general, ¿qué está haciendo el dramaturgo Molnár en este fragmento?",
           name: "pa3",
           options: [
-            {value: "a", text: "Está mostrando el modo en que cada personaje va a resolver sus propios problemas."},
+            {value: "a", text: "Está presentando algunas de las principales dificultades de los espectadores."},
             {value: "b", text: "Está haciendo que sus personajes demuestren cómo es una eternidad en una obra de teatro."},
-            {value: "c", text: "Está dando un ejemplo de una típica y tradicional escena inicial de una obra de teatro."},                
-            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."}
+            {value: "c", text: "Está dando un ejemplo de una tradicional escena inicial de una obra de teatro"},                
+            {value: "d", text: "Está utilizando a los personajes para representar uno de sus propios problemas de creación."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d"
         },
@@ -237,19 +240,21 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Le resulta complicado plantear las situaciones en la obra."},
             {value: "b", text: "Le implica un fastidio tener que escribir obras de teatro."},
             {value: "c", text: "Se siente esclavo de la profesión porque aún no la domina."},                
-            {value: "d", text: "Considera que los personajes significan siempre un problema."}
+            {value: "d", text: "Considera que los personajes significan siempre un problema."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "c",
         },
-        {text: "<b class='question-title'>Pregunta 5/8</b><br>¿Qué frase describe mejor una de las principales dificultades al leer esta obra teatral? ",
+        {text: "<b class='question-title'>Pregunta 5/8</b><br>Luigi Pirandello es considerado una de las mayores influencias del autor de “La representación será la trampa”. Pirandello fue una figura fundamental en la renovación del teatro moderno en el siglo XX, caracterizado por centrarse en la reflexión sobre el propio arte y su validez como forma de representación y comunicación.<br>¿Qué aspecto del fragmento de la obra teatral leída muestra claramente esta influencia?",
           name: "pa5",
           options: [
-            {value: "a", text: "Identificar las acciones que se insertan en los parlamentos de cada uno de los personajes."},
-            {value: "b", text: "Entender las referencias al proceso de escritura de una obra de teatro."},
-            {value: "c", text: "Diferenciar las ocupaciones y las personalidades de Gál, Turai y Ádám."},                
-            {value: "d", text: "Distinguir entre los personajes y los personajes que éstos interpretan en la obra de Turai."}
+            {value: "a", text: "La historia gira en torno a problemáticas de la clase alta italiana."},
+            {value: "b", text: "Los personajes comentan el proceso de escritura de una obra de teatro."},
+            {value: "c", text: "Las personalidades de Gál, Turai y Ádám se dan a conocer en sus diálogos."},                
+            {value: "d", text: "Los personajes dialogan sobre sus problemas personales de comunicación."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
-          correct_answer: "d",
+          correct_answer: "b",
         },
         {text: `<b class='question-title'>Pregunta 6/8</b><br>¿Qué significa el texto en cursivas en el siguiente parlamento? 
             <dl><dt>GÁL y TURAI</dt> <dd><i>A la vez.</i>Y este joven...</dd></dl>`,
@@ -258,27 +263,30 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
             {value: "a", text: "Señala el tipo de relación entre Gál y Turai en su vida profesional."},
             {value: "b", text: "Pone un énfasis en las palabras de los personajes en escena."},
             {value: "c", text: "Es un parlamento que dicen Gál y Turai al hablar con Ádám."},                
-            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."}
+            {value: "d", text: "Es una acotación que indica las acciones de los personajes en escena."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "d",
         },
-        {text: "<b class='question-title'>Pregunta 7/8</b><br>¿Qué estaban haciendo los personajes de la obra de teatro justo antes de que se levantase el telón? ",
+        {text: "<b class='question-title'>Pregunta 7/8</b><br>Según lo que dicen los personajes, ¿qué estaban haciendo justo antes de que comience la obra de teatro?",
           name: "pa7",
           options: [
             {value: "a", text: "Acaban de cenar y de tomar champagne."},
             {value: "b", text: "Conversan en voz alta tras la puerta."},
             {value: "c", text: "Le hicieron a Ádám el frac y el esmoquin."},
-            {value: "d", text: "Se preparan para salir al escenario."}
+            {value: "d", text: "Encienden la luz en el escenario."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         },
-        {text: "<b class='question-title'>Pregunta 8/8</b><br>La metanarrativa es un tipo de literatura en el que un personaje o grupo de personajes son autoconscientes de su naturaleza. El narrador o los personajes sistemáticamente llaman la atención sobre su condición con el fin de plantear preguntas acerca de la relación entre la ficción y la realidad. <br>¿Crees que esta obra de teatro es un ejemplo de este tipo de ficción?",
+        {text: "<b class='question-title'>Pregunta 8/8</b><br>Esta obra es un ejemplo de metaficción, un tipo de literatura cuyos temas e historias giran en torno a los mecanismos de la ficción y sus características.<br>¿Por qué crees que esta obra de teatro es metaficción?",
           name: "pa8",
           options: [
-            {value: "a", text: "No, los personajes están vinculados con el teatro pero no tienen conciencia de su condición."},
-            {value: "b", text: "Sí, los actores reconocen su naturaleza en cada intervención."},
-            {value: "c", text: "No, los personajes no son actores en una obra de teatro."},                
-            {value: "d", text: "Sí, los actores son personajes en una obra de teatro y se dedican al teatro."}
+            {value: "a", text: "Los personajes comentan su condición y la de la dramaturgia."},
+            {value: "b", text: "Los actores evalúan al autor de “La representación será la trampa"},
+            {value: "c", text: "Los personajes no son actores en una obra de teatro."},                
+            {value: "d", text: "Los actores son asiduos espectadores del teatro de Molnár."},
+            {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
           correct_answer: "a",
         }
