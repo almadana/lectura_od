@@ -191,7 +191,7 @@ form table tbody td {
   color: hsl(186, 100%, 33%);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .excercise .question_wrap_header {
     display: none;
   }
