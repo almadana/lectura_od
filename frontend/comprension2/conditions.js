@@ -278,16 +278,16 @@ const conditions = {
           ],
           correct_answer: "b",
         },
-        {text: "<b class='question-title'>Pregunta 7/7</b><br>¿Cuál de las descripciones del estilo de Tucídides corresponde con el siguiente fragmento de <i>Historia de la guerra del Peloponeso?</i> <p>«Obedecemos a quienes ponemos a desempeñar cargos públicos y obedecemos las leyes, en especial las dirigidas a la protección de los oprimidos y las leyes no escritas que supone una verdadera vergüenza infringir.»</p>",
+        {text: "<b class='question-title'>Pregunta 7/7</b><br>¿Qué concepto de democracia se describe en el fragmento de Historia de la guerra del Peloponeso que se presenta en la parte B?",
           name: "pb7",
           options: [
-            {value: "a", text: "Tucídides fue un historiador y militar que vivió en el siglo V a. C, durante la época de la Grecia clásica."},
-            {value: "b", text: "Se centra más en las causas naturales y en la conducta de cada individuo que en el destino o en la intervención de los dioses\n para explicar la evolución de la historia."},
-            {value: "c", text: "Esta circunstancia le dio la oportunidad de recoger información bastante completa de los dos bandos en conflicto."},
-            {value: "d", text: "En su obra, los hechos no se presentan como meras anécdotas, sino que se explican tratando de descubrir los motivos que llevaron\n  a los protagonistas a actuar del modo en que lo hicieron."},
+            {value: "a", text: "Sistema basado en las leyes que regulan el ámbito privado y que favorecen la autonomía para el comercio exterior, así como para el ámbito público, espiritual y estético."},
+            {value: "b", text: "Gobierno legalista que regula ámbitos públicos y privados en beneficio de cargos estatales, méritos sociales, así como usos y costumbres atenienses."},
+            {value: "c", text: "Sistema basado en el poder de la mayoría, la igualdad de derechos, la obediencia a la Ley, la protección de los más desfavorecidos, el cuidado del espíritu y el intercambio con otros pueblos."},
+            {value: "d", text: "Gobierno legalista y libertario que garantiza el derecho privado y favorece la ley pública que promueve el comercio exterior."},
             {value: "NA", text: "No quiero responder a esta pregunta."}
           ],
-          correct_answer: "d",
+          correct_answer: "c",
         },
       ]
     }
