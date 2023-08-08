@@ -2,11 +2,11 @@ const conditions = {
   'development': [
     {title: 'Texto 1  - LA REPRESENTACIÓN SERÁ LA TRAMPA',
       text: `
-<p style="font-style:italic">La acción se desarrolla en un castillo junto a una playa en Italia. </p>
+<p>La acción se desarrolla en un castillo junto a una playa en Italia. </p>
 <h4>Acto primero </h4>
-<em>
+<p>
 Lujoso salón de invitados de un hermoso castillo al lado de la playa. Puertas a derecha e izquierda. Mobiliario de salón en medio del escenario: un sofá, una mesa y dos sillones. Grandes ventanas al fondo. Noche estrellada. El escenario está a oscuras. Cuando se levanta el telón, se oye a unos hombres que conversan en voz alta tras la puerta de la izquierda. La puerta se abre y entran tres caballeros de esmoquin. Uno de ellos enciende la luz inmediatamente. Se dirigen hacia el centro en silencio y se sitúan alrededor de la mesa. Se sientan a la vez, Gál en el sillón de la izquierda, Turai en el de la derecha y Ádám en el sofá del medio. Silencio muy largo, casi violento. Se estiran cómodamente. Silencio. Después: 
-</em>
+</p>
 <dl>
 <dt>GÁL</dt>
 <dd>¿Por qué estás tan pensativo? </dd>

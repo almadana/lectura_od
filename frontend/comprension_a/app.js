@@ -1,6 +1,25 @@
 const query = new URLSearchParams(window.location.search);
 const sid = query.get('sid')||0;
 const gid = query.get('gid');
+const group = query.get('group')||1;
+
+let font_family = "";
+let text_order = [];
+
+if (group==1) {
+  font_family = 'font_serif';
+  text_order = ["A", "B"]
+} else if (group==2) {
+  font_family = 'font_dyslexic';
+  text_order = ["A", "B"]
+} else if (group==3) {
+  font_family = 'font_serif';
+  text_order = ["B", "A"]
+} else if (group==4) {
+  font_family = 'font_dyslexic';
+  text_order = ["B", "A"]
+}
+
 let text_y = 0;
 let question_y = 0;
 var answers = {};
@@ -30,6 +49,8 @@ function next_excercise() {
 
   _excercise.dataset.excercise_id = next_excercise_id;
   delete _excercise.dataset.question_id;
+
+  _excercise.classList.add(font_family);
 
   const _title = document.querySelector(".excercise .title");
   _title.innerHTML = trial.title;
