@@ -1,24 +1,7 @@
-const query = new URLSearchParams(window.location.search);
-const sid = query.get('sid')||0;
-const gid = query.get('gid');
-const group = query.get('group')||1;
+const [font_families, excercices] = get_conditions();
 
-let font_family = "";
-let text_order = [];
-
-if (group==1) {
-  font_family = 'font_serif';
-  text_order = ["A", "B"]
-} else if (group==2) {
-  font_family = 'font_dyslexic';
-  text_order = ["A", "B"]
-} else if (group==3) {
-  font_family = 'font_serif';
-  text_order = ["B", "A"]
-} else if (group==4) {
-  font_family = 'font_dyslexic';
-  text_order = ["B", "A"]
-}
+const font_family = [font_families[0]];
+const trials = [excercices[0]];
 
 let text_y = 0;
 let question_y = 0;
@@ -31,6 +14,26 @@ function goodbye() {
   _exit.classList.remove('hidden');
 }
 
+function show_intro() {
+  const _excercise = document.querySelector(".excercise");
+
+  if (_excercise.dataset.excercise_id) {
+    var next_excercise_id = parseInt(_excercise.dataset.excercise_id) + 1;
+  } else {
+    var next_excercise_id = 0;
+  }
+
+  const trial = trials[next_excercise_id];
+
+  if (!trial) {
+    goodbye();
+    return
+  }
+
+  render_intro(trial);
+
+}
+
 function next_excercise() {
   const _excercise = document.querySelector(".excercise");
 
@@ -40,7 +43,7 @@ function next_excercise() {
     var next_excercise_id = 0;
   }
 
-  const trial = conditions[environment][next_excercise_id];
+  const trial = trials[next_excercise_id];
 
   if (!trial) {
     goodbye();
@@ -102,6 +105,19 @@ function jump_question(jump) {
   render_question(next_question_id);
 }
 
+function render_intro(trial) {
+  const _excercise = document.querySelector(".excercise");
+  const _intro = document.querySelector(".intro");
+  _intro.innerHTML = trial.intro;
+
+  const _start_task = document.querySelector(".intro .start_task");
+  _start_task.addEventListener('click', evt=> {
+    _intro.classList.add("hidden");
+    _excercise.classList.remove("hidden");
+    next_excercise();
+  });
+}
+
 function render_question(question_id) {
   const _answer = document.querySelector(".excercise .answer");
   const _question_body = document.querySelector(".excercise .question .body");
@@ -143,12 +159,10 @@ function prev_question() {
 
 function welcome() {
   const _welcome = document.querySelector(".welcome");
-  const _excercise = document.querySelector(".excercise");
-  const _start_task = document.querySelector(".welcome .start_task");
-  _start_task.addEventListener('click', evt=> {
+  const _show_intro = document.querySelector(".welcome .show_intro");
+  _show_intro.addEventListener('click', evt=> {
     _welcome.classList.add("hidden");
-    _excercise.classList.remove("hidden");
-    next_excercise(0);
+    show_intro();
   });
 }
 

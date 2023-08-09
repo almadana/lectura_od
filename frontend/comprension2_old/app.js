@@ -1,6 +1,8 @@
-const query = new URLSearchParams(window.location.search);
-const sid = query.get('sid')||0;
-const gid = query.get('gid');
+const [font_families, excercices] = get_conditions();
+
+const font_family = [font_families[1]];
+const trials = [excercices[1]];
+
 let text_y = 0;
 let question_y = 0;
 var answers = {};
@@ -21,7 +23,7 @@ function next_excercise() {
     var next_excercise_id = 0;
   }
 
-  const trial = conditions[environment][next_excercise_id];
+  const trial = trials[next_excercise_id];
 
   if (!trial) {
     goodbye();
@@ -30,6 +32,8 @@ function next_excercise() {
 
   _excercise.dataset.excercise_id = next_excercise_id;
   delete _excercise.dataset.question_id;
+
+  _excercise.classList.add(font_family);
 
   const _title = document.querySelector(".excercise .title");
   _title.innerHTML = trial.title;
