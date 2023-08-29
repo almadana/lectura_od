@@ -14,16 +14,20 @@ function goodbye() {
   _exit.classList.remove('hidden');
 }
 
-function show_intro() {
+function get_trial() {
   const _excercise = document.querySelector(".excercise");
 
+  let excercise_id = 0;
   if (_excercise.dataset.excercise_id) {
-    var next_excercise_id = parseInt(_excercise.dataset.excercise_id) + 1;
-  } else {
-    var next_excercise_id = 0;
+    excercise_id = parseInt(_excercise.dataset.excercise_id);
   }
 
-  const trial = trials[next_excercise_id];
+  const trial = trials[excercise_id];
+  return trial
+}
+
+function show_intro() {
+  const trial = get_trial();
 
   if (!trial) {
     goodbye();
@@ -31,7 +35,6 @@ function show_intro() {
   }
 
   render_intro(trial);
-
 }
 
 function next_excercise() {
@@ -43,14 +46,15 @@ function next_excercise() {
     var next_excercise_id = 0;
   }
 
-  const trial = trials[next_excercise_id];
+  _excercise.dataset.excercise_id = next_excercise_id;
+
+  const trial = get_trial();
 
   if (!trial) {
     goodbye();
     return
   }
 
-  _excercise.dataset.excercise_id = next_excercise_id;
   delete _excercise.dataset.question_id;
 
   _excercise.classList.add(font_family);
@@ -81,7 +85,7 @@ function jump_question(jump) {
   const next_question_id = parseInt(question_id) + jump;
   const _prev_question = document.querySelector("#prev_question");
 
-  const trial = conditions[environment][excercise_id];
+  const trial = get_trial();
   const current_question = trial.questions[question_id];
 
   const answer_value = _current_answer.value;
@@ -122,8 +126,7 @@ function render_question(question_id) {
   const _answer = document.querySelector(".excercise .answer");
   const _question_body = document.querySelector(".excercise .question .body");
   const _excercise = document.querySelector(".excercise");
-  const excercise_id = _excercise.dataset.excercise_id;
-  const trial = conditions[environment][excercise_id];
+  const trial = get_trial();
   const question = trial.questions[question_id];
 
   _answer.dataset.correct_answer = question.correct_answer;
