@@ -1,4 +1,4 @@
-function rid(size=32) {
+function rhex(size=32) {
   const buffer = new Uint8Array(size)
   window.crypto.getRandomValues(buffer)
   const rands = Array.from(buffer);
@@ -14,7 +14,7 @@ function rid(size=32) {
   return hex
 }
 
-function random_int(min=0, max=9) {
-  let interval = (max + 1) - min;
-  return Math.floor(Math.random() * interval) + min;
+function rint(min=0, max=1) {
+  //https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+  return Math.floor(Math.random() * (max - min + 1) + min)
 }

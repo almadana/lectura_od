@@ -5,8 +5,23 @@
   font-style: normal;
 } 
 
+@font-face { 
+  font-family: dyslexic; 
+  src: url(font/opendyslexic3/OpenDyslexic3-Regular.ttf);
+  font-weight: normal; 
+  font-style: normal;
+} 
+
 body {
   font: 1rem "comfortaa", sans-serif;
+}
+
+.excercise.font_serif {
+  font: 1rem "comfortaa", sans-serif;
+}
+
+.excercise.font_dyslexic {
+  font: 1rem "dyslexic", sans-serif;
 }
 
 h1 {
@@ -115,11 +130,6 @@ form table tbody td {
 
 .excercise {
   margin-bottom: 10rem;
-}
-
-.excercise .text {
-/*  white-space: pre-wrap; */
-    font-family: "serif";
 }
 
 .excercise.long_question .title {

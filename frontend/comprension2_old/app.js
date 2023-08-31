@@ -14,29 +14,6 @@ function goodbye() {
   _exit.classList.remove('hidden');
 }
 
-function get_trial() {
-  const _excercise = document.querySelector(".excercise");
-
-  let excercise_id = 0;
-  if (_excercise.dataset.excercise_id) {
-    excercise_id = parseInt(_excercise.dataset.excercise_id);
-  }
-
-  const trial = trials[excercise_id];
-  return trial
-}
-
-function show_intro() {
-  const trial = get_trial();
-
-  if (!trial) {
-    goodbye();
-    return
-  }
-
-  render_intro(trial);
-}
-
 function next_excercise() {
   const _excercise = document.querySelector(".excercise");
 
@@ -46,15 +23,14 @@ function next_excercise() {
     var next_excercise_id = 0;
   }
 
-  _excercise.dataset.excercise_id = next_excercise_id;
-
-  const trial = get_trial();
+  const trial = trials[next_excercise_id];
 
   if (!trial) {
     goodbye();
     return
   }
 
+  _excercise.dataset.excercise_id = next_excercise_id;
   delete _excercise.dataset.question_id;
 
   _excercise.classList.add(font_family);
@@ -85,7 +61,7 @@ function jump_question(jump) {
   const next_question_id = parseInt(question_id) + jump;
   const _prev_question = document.querySelector("#prev_question");
 
-  const trial = get_trial();
+  const trial = conditions[environment][excercise_id];
   const current_question = trial.questions[question_id];
 
   const answer_value = _current_answer.value;
@@ -109,24 +85,12 @@ function jump_question(jump) {
   render_question(next_question_id);
 }
 
-function render_intro(trial) {
-  const _excercise = document.querySelector(".excercise");
-  const _intro = document.querySelector(".intro");
-  _intro.innerHTML = trial.intro;
-
-  const _start_task = document.querySelector(".intro .start_task");
-  _start_task.addEventListener('click', evt=> {
-    _intro.classList.add("hidden");
-    _excercise.classList.remove("hidden");
-    next_excercise();
-  });
-}
-
 function render_question(question_id) {
   const _answer = document.querySelector(".excercise .answer");
   const _question_body = document.querySelector(".excercise .question .body");
   const _excercise = document.querySelector(".excercise");
-  const trial = get_trial();
+  const excercise_id = _excercise.dataset.excercise_id;
+  const trial = conditions[environment][excercise_id];
   const question = trial.questions[question_id];
 
   _answer.dataset.correct_answer = question.correct_answer;
@@ -162,10 +126,12 @@ function prev_question() {
 
 function welcome() {
   const _welcome = document.querySelector(".welcome");
-  const _show_intro = document.querySelector(".welcome .show_intro");
-  _show_intro.addEventListener('click', evt=> {
+  const _excercise = document.querySelector(".excercise");
+  const _start_task = document.querySelector(".welcome .start_task");
+  _start_task.addEventListener('click', evt=> {
     _welcome.classList.add("hidden");
-    show_intro();
+    _excercise.classList.remove("hidden");
+    next_excercise(0);
   });
 }
 

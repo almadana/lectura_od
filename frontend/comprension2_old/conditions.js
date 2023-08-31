@@ -1,15 +1,7 @@
 const conditions = {
   'development': [
     {title: 'Texto 1  - LA REPRESENTACIÓN SERÁ LA TRAMPA',
-     intro: `
-       <p>En esta prueba verás un texto corto, un fragmento de la obra "La representación será la trampa" de Férec Molnár.</p>
-       <p>Tendrás que responder 8 preguntas sobre el contenido del texto.</p>
-       <p>Por favor, lee atentamente el texto y las preguntas, y tómate tu tiempo en responder con la opción que a tu juicio consideres más correcta.</p>
-       <div class="actions">
-         <button type="button" class="button start_task">Siguiente</button>
-       </div>
-     `,
-     text: `
+      text: `
 <p>La acción se desarrolla en un castillo junto a una playa en Italia. </p>
 <h4>Acto primero </h4>
 <p>
@@ -154,14 +146,6 @@ Mi nombre es Sándor Turai, soy autor teatral, llevo escribiendo obras de teatr
       ]
     },
     {title: 'Texto 2 - La democracia en Atenas',
-      intro: `
-        <p>Verás a continuación un fragmento de "Historia de la guerra del Peloponeso" del historiador griego Tucídides.</p>
-        <p>En este caso tendrás que responder 7 preguntas sobre el contenido del texto.</p>
-        <p>Por favor, lee atentamente el texto y las preguntas, y tómate tu tiempo en responder con la opción que a tu juicio consideres más correcta.</p>
-        <div class="actions">
-          <button type="button" class="button start_task">Siguiente</button>
-        </div>
-      `,
       text: `
       <h3>PARTE A</h3>
   <p>

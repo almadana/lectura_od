@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', evt => {
   const params = new URLSearchParams(url.search);
 
   const sid = params.get("sid") || rid();
-  const gid = params.get("gid") || "";
+  const gid = params.get("gid") || random_int(1,4);
 
   const _with_uid = document.querySelectorAll(".with_uid");
   for (let _link of _with_uid) {
