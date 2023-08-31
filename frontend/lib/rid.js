@@ -13,3 +13,8 @@ function rid(size=32) {
 
   return hex
 }
+
+function random_int(min=0, max=9) {
+  let interval = (max + 1) - min;
+  return Math.floor(Math.random() * interval) + min;
+}
