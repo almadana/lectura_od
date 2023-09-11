@@ -12,13 +12,20 @@
   font-style: normal;
 } 
 
+@font-face { 
+  font-family: dejavu_sans; 
+  src: url(font/dejavu_sans/DejaVuSans.ttf);
+  font-weight: normal; 
+  font-style: normal;
+} 
+
 body {
   font: 1rem "comfortaa", sans-serif;
 }
 
 .excercise.font_serif {
 /*  font: 1rem "comfortaa", sans-serif; */
-  font-family: "serif";
+  font: 1rem "dejavu_sans", sans-serif;
 }
 
 .excercise.font_dyslexic {
