@@ -1,6 +1,6 @@
 require 'time'
 require 'json'
-require 'sequel'
+require_relative 'config/connection'
 
 #This monkey-patch is needed for Ruby before 2.5
 class Hash
@@ -9,7 +9,6 @@ class Hash
   end
 end
 
-DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
 words = DB[:words]
 autores = DB[:autores]
 sociodemo = DB[:sociodemo]

@@ -1,12 +1,7 @@
-require 'sequel'
+require '../config/connection'
 
-DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
+words = DB[:words]
+p words.all
 
-raven = DB[:raven]
-p raven.all
-
-lextale = DB[:lextale]
-p lextale.all
-
-prueba = DB[:prueba]
-p prueba.all
+comprension = DB[:comprension]
+p comprension.all

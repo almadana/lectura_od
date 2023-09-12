@@ -1,6 +1,4 @@
-require 'sequel'
-
-DB = Sequel.connect('mysql2://digital_user:goU0oLgYwsc4JXiA@localhost/digital')
+require '../config/connection'
 
 begin
   DB.drop_table :words
