@@ -69,7 +69,6 @@ function next_excercise() {
 }
 
 function jump_question(jump) {
-  console.log(answers);
   const _answer = document.querySelector(".excercise .answer");
   const _current_answer = _answer.querySelector(":checked");
 
@@ -90,7 +89,6 @@ function jump_question(jump) {
 
   const answer_value = _current_answer.value;
   const data = {sid: sid, gid: gid, question: current_question.name, answer: answer_value, correct_answer: _answer.dataset.correct_answer}
-  console.log(data);
   answers[current_question.name] = answer_value;
   log_data('comprension', data);
 
